@@ -1,0 +1,27 @@
+site_name: Velvet Secrets Online Shop Docs
+nav:
+  - Главная: README.md
+  - Введение:
+      - Onboarding: Onboarding.md
+      - Глоссарий: Glossary.md
+      - Архитектура: Architecture.md
+      - Структура Atomic Design: atomic-design-structure.md
+  - Руководства:
+      - Пошаговая инструкция: instructions.md
+      - Как добавить фичу: How-to-add-feature.md
+      - Вклад в проект: Contributing.md
+      - Линтинг: linting.md
+      - Git: git-best-practices.md
+      - BEM: bem-guide.md
+      - Tailwind: tailwind-guide.md
+      - RTK & RTK Query: rtk-guide.md
+      - Моки API: API-mocking-guide.md
+      - Тестирование: Testing-guide.md
+  - Решение проблем:
+      - FAQ: FAQ.md
+      - Troubleshooting: Troubleshooting.md
+  - Справочник:
+      - Полезные ссылки: Useful-links.md 
+docs_dir: docs
+theme:
+  name: readthedocs
