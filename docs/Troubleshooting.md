@@ -91,4 +91,12 @@
 
 ---
 
+## См. также
+- [Architecture: как устроен проект](./Architecture.md)
+- [How to add a feature](./How-to-add-feature.md)
+- [Testing Guide](./Testing-guide.md)
+- [RTK & RTK Query](./rtk-guide.md)
+- [Atomic Design: структура и примеры](./atomic-design-structure.md)
+- [Полезные ссылки](./Useful-links.md)
+
 **Если не нашёл свою ошибку — спроси у ментора или добавь её сюда!** 

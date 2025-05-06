@@ -84,4 +84,12 @@
 
 ---
 
-**Если не нашёл ответ — не стесняйся спрашивать!** 
+**Если не нашёл ответ — не стесняйся спрашивать!**
+
+## См. также
+- [README](./README.md)
+- [Architecture: как устроен проект](./Architecture.md)
+- [How to add a feature](./How-to-add-feature.md)
+- [Testing Guide](./Testing-guide.md)
+- [Troubleshooting](./Troubleshooting.md)
+- [Полезные ссылки](./Useful-links.md) 

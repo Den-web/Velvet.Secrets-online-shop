@@ -132,4 +132,11 @@ const items = useSelector((state) => state.cart.items);
 
 ---
 
-**RTK и RTK Query — это быстро, удобно и современно. Не бойся экспериментировать и читать официальную документацию!** 
+**RTK и RTK Query — это быстро, удобно и современно. Не бойся экспериментировать и читать официальную документацию!**
+
+## См. также
+- [Architecture: как устроен проект](./Architecture.md)
+- [How to add a feature](./How-to-add-feature.md)
+- [Testing Guide](./Testing-guide.md)
+- [Troubleshooting](./Troubleshooting.md)
+- [Полезные ссылки](./Useful-links.md) 

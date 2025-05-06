@@ -141,4 +141,12 @@ src/
 
 ---
 
-**Atomic Design помогает не запутаться в компонентах и строить большие проекты удобно и понятно!** 
+**Atomic Design помогает не запутаться в компонентах и строить большие проекты удобно и понятно!**
+
+## См. также
+- [Architecture: как устроен проект](./Architecture.md)
+- [README](./README.md)
+- [How to add a feature](./How-to-add-feature.md)
+- [Testing Guide](./Testing-guide.md)
+- [Troubleshooting](./Troubleshooting.md)
+- [Полезные ссылки](./Useful-links.md) 

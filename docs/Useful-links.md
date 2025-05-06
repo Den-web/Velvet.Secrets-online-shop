@@ -56,4 +56,15 @@
 
 ---
 
+## См. также
+- [README](./README.md)
+- [Architecture: как устроен проект](./Architecture.md)
+- [Atomic Design: структура и примеры](./atomic-design-structure.md)
+- [How to add a feature](./How-to-add-feature.md)
+- [Testing Guide](./Testing-guide.md)
+- [RTK & RTK Query](./rtk-guide.md)
+- [Troubleshooting](./Troubleshooting.md)
+
+---
+
 **Если нашёл полезную ссылку — добавь её сюда!**

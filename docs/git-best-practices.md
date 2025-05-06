@@ -108,4 +108,10 @@ git push origin feature/my-new-feature
 
 ---
 
-**Git — твой друг. Не бойся экспериментировать, но всегда делай бэкап важного!** 
+**Git — твой друг. Не бойся экспериментировать, но всегда делай бэкап важного!**
+
+## См. также
+- [README](./README.md)
+- [How to add a feature](./How-to-add-feature.md)
+- [Troubleshooting](./Troubleshooting.md)
+- [Полезные ссылки](./Useful-links.md) 

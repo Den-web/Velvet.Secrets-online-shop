@@ -67,4 +67,12 @@ npm run dev
 
 ---
 
+## См. также
+- [README](./README.md)
+- [Architecture: как устроен проект](./Architecture.md)
+- [How to add a feature](./How-to-add-feature.md)
+- [Testing Guide](./Testing-guide.md)
+- [Troubleshooting](./Troubleshooting.md)
+- [Полезные ссылки](./Useful-links.md)
+
 **Добро пожаловать! Не бойся экспериментировать и задавать вопросы — здесь все учатся!** 

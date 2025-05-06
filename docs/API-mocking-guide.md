@@ -83,4 +83,11 @@
 
 ---
 
-**Моки — это удобно! Можно разрабатывать и тестировать даже без настоящего API.** 
+**Моки — это удобно! Можно разрабатывать и тестировать даже без настоящего API.**
+
+## См. также
+- [README](./README.md)
+- [How to add a feature](./How-to-add-feature.md)
+- [Testing Guide](./Testing-guide.md)
+- [Troubleshooting](./Troubleshooting.md)
+- [Полезные ссылки](./Useful-links.md) 

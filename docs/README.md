@@ -47,4 +47,13 @@ npm run dev
 - Для полноценного портала можно использовать [GitHub Wiki](https://docs.github.com/en/communities/documenting-your-project-with-wikis/about-wikis) или [mkdocs](https://www.mkdocs.org/) (рекомендуется для больших проектов)
 
 ## Credits
-Основано на [react-rtk-atomic-starter](https://github.com/cod3rcarlos/react-rtk-atomic-starter) + собственные доработки. 
+Основано на [react-rtk-atomic-starter](https://github.com/cod3rcarlos/react-rtk-atomic-starter) + собственные доработки.
+
+## См. также
+- [Architecture: как устроен проект](./Architecture.md)
+- [Atomic Design: структура и примеры](./atomic-design-structure.md)
+- [How to add a feature](./How-to-add-feature.md)
+- [Testing Guide](./Testing-guide.md)
+- [RTK & RTK Query](./rtk-guide.md)
+- [Troubleshooting](./Troubleshooting.md)
+- [Полезные ссылки](./Useful-links.md) 

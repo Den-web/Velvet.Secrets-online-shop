@@ -88,4 +88,12 @@ git push origin feature/your-feature-name
 
 ---
 
-**Добавлять фичи — это просто! Главное — делай это по шагам и не бойся спрашивать.** 
+**Добавлять фичи — это просто! Главное — делай это по шагам и не бойся спрашивать.**
+
+## См. также
+- [Architecture: как устроен проект](./Architecture.md)
+- [Atomic Design: структура и примеры](./atomic-design-structure.md)
+- [Testing Guide](./Testing-guide.md)
+- [RTK & RTK Query](./rtk-guide.md)
+- [Troubleshooting](./Troubleshooting.md)
+- [Полезные ссылки](./Useful-links.md) 

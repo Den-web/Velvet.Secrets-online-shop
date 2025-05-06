@@ -66,3 +66,12 @@
 ---
 
 **Эта архитектура — не догма, а удобная отправная точка. Если что-то мешает — обсуждай и меняй!**
+
+## См. также
+- [Atomic Design: структура и примеры](./atomic-design-structure.md)
+- [README](./README.md)
+- [How to add a feature](./How-to-add-feature.md)
+- [RTK & RTK Query](./rtk-guide.md)
+- [Testing Guide](./Testing-guide.md)
+- [Troubleshooting](./Troubleshooting.md)
+- [Полезные ссылки](./Useful-links.md)

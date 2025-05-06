@@ -100,4 +100,12 @@ npx jest
 
 ---
 
-**Тесты — это не страшно! Начни с простого, и проект станет надёжнее.** 
+**Тесты — это не страшно! Начни с простого, и проект станет надёжнее.**
+
+## См. также
+- [How to add a feature](./How-to-add-feature.md)
+- [Architecture: как устроен проект](./Architecture.md)
+- [Atomic Design: структура и примеры](./atomic-design-structure.md)
+- [RTK & RTK Query](./rtk-guide.md)
+- [Troubleshooting](./Troubleshooting.md)
+- [Полезные ссылки](./Useful-links.md) 

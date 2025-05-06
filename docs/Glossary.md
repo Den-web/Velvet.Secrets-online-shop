@@ -56,4 +56,13 @@
 
 ---
 
-**Если встретил непонятный термин — добавь его сюда или спроси у ментора!** 
+**Если встретил непонятный термин — добавь его сюда или спроси у ментора!**
+
+## См. также
+- [README](./README.md)
+- [Architecture: как устроен проект](./Architecture.md)
+- [Atomic Design: структура и примеры](./atomic-design-structure.md)
+- [How to add a feature](./How-to-add-feature.md)
+- [Testing Guide](./Testing-guide.md)
+- [Troubleshooting](./Troubleshooting.md)
+- [Полезные ссылки](./Useful-links.md) 

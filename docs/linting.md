@@ -87,4 +87,12 @@ This project uses **ESLint** for code quality and **Prettier** for code formatti
 - [Contributing](Contributing.md)
 - [Onboarding](Onboarding.md)
 
+## См. также
+- [README](./README.md)
+- [Architecture: как устроен проект](./Architecture.md)
+- [How to add a feature](./How-to-add-feature.md)
+- [Testing Guide](./Testing-guide.md)
+- [Troubleshooting](./Troubleshooting.md)
+- [Полезные ссылки](./Useful-links.md)
+
 --- 
