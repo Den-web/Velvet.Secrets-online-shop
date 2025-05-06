@@ -13,20 +13,32 @@ const ShopPage: React.FC = () => {
 
   return (
     <div>
-      <h1 className="text-2xl font-bold mb-4">Shop</h1>
-      <ul>
+      <h1 className="text-3xl font-bold mb-6 text-purple-900">Shop</h1>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
         {products?.map((product) => (
-          <li
+          <div
             key={product.id}
-            className="mb-4 p-4 border rounded flex justify-between items-center"
+            className="bg-white rounded-xl shadow-md border border-purple-100 p-6 flex flex-col items-center"
           >
-            <span>
-              {product.name} - ${product.price}
-            </span>
-            <Button onClick={() => dispatch(addItem(product))}>Add to Cart</Button>
-          </li>
+            <img
+              src={product.image || 'https://placehold.co/200x200?text=Product'}
+              alt={product.name}
+              className="w-32 h-32 object-cover rounded mb-4 border"
+            />
+            <h2 className="text-lg font-semibold mb-2 text-purple-800">{product.name}</h2>
+            <p className="text-gray-500 mb-2">
+              {product.description || 'A wonderful product for your needs.'}
+            </p>
+            <span className="text-xl font-bold text-purple-700 mb-4">${product.price}</span>
+            <Button
+              onClick={() => dispatch(addItem(product))}
+              className="w-full bg-purple-600 hover:bg-purple-700 text-white rounded-full"
+            >
+              Add to Cart
+            </Button>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 };
