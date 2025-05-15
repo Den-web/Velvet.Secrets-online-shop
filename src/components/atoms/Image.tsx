@@ -2,27 +2,25 @@ import React from 'react';
 import { Image as AntImage } from "antd";
 import fallback from '../../assets/imagesSection2/image2@2x.jpg';
 
-interface StyledImageAtomProps {
+interface ImageProps {
     src: string;
     alt: string;
     className?: string;
-    wrapperClassName?: string;
     onError?: (event: React.SyntheticEvent<HTMLImageElement, Event>) => void;
 }
 
-export const StyledImageAtom: React.FC<StyledImageAtomProps> = ({
+export const Image: React.FC<ImageProps> = ({
     src,
     alt,
-    className = "h-full w-full object-cover object-center",
-    wrapperClassName = "aspect-w-3 aspect-h-4 w-full overflow-hidden",
+    className,
     onError,
 }) => {
 return (
-    <div className={wrapperClassName}>
+    <div>
         <AntImage
         src={src}
         alt={alt}
-        className={`${className} transition-transform duration-300 group-hover:scale-105`}
+        className={className}
         preview={false}
         fallback={fallback}
         onError={onError}

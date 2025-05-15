@@ -1,7 +1,9 @@
 import React from 'react';
 import Button from '../atoms/Button';
+import { BestsellersSection } from '../organisms/BestsellersSection';
 
 const HomePage: React.FC = () => (
+  <>
   <section className="w-full flex flex-col items-center justify-center">
     <div className="w-full max-w-2xl mx-auto relative bg-gradient-to-br from-purple-200 to-pink-100 rounded-2xl shadow-2xl p-10 flex flex-col items-center justify-center min-h-[50vh] mb-12 mt-8">
       <h1 className="text-5xl md:text-6xl font-extrabold mb-6 text-purple-900 drop-shadow-lg text-center">
@@ -16,6 +18,10 @@ const HomePage: React.FC = () => (
       </Button>
     </div>
   </section>
+  <section>
+    <BestsellersSection/>
+  </section>
+  </>
 );
 
 export default HomePage;
