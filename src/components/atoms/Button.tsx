@@ -1,13 +1,15 @@
 import React from 'react';
+import { Button as AntButton } from 'antd';
 
-type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
+type ButtonProps = React.ComponentProps<typeof AntButton> & {
   children: React.ReactNode;
+  className?: string;
 };
 
-const Button: React.FC<ButtonProps> = ({ children, ...props }) => (
-  <button {...props} className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
+const Button: React.FC<ButtonProps> = ({ children, className = '', ...props }) => (
+  <AntButton className={className} {...props} htmlType={props.htmlType || 'button'}>
     {children}
-  </button>
+  </AntButton>
 );
 
 export default Button;
