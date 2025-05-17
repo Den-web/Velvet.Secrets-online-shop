@@ -16,7 +16,9 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.7.0",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
     "@types/react-router-dom": "^5.3.3",
+    "antd": "^5.25.1",
     "prettier": "^3.5.3",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
