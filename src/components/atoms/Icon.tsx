@@ -11,7 +11,7 @@ How to use custom SVG icons with the Icon component:
 
 2. Import the SVG as a React component in your file:
    // Vite, CRA, or SVGR setup required
-   import { ReactComponent as StarIcon } from '../../assets/icons/star.svg';
+   import StarIcon from '../../assets/icons/star.svg?react';
 
 3. Use the Icon component to render your SVG:
    import { Icon } from './Icon';
@@ -19,20 +19,34 @@ How to use custom SVG icons with the Icon component:
    <Icon icon={StarIcon} className="w-6 h-6 text-yellow-500" />
 
 You can pass any SVG props (width, height, fill, etc.) or className for styling.
+
+Props:
+- fontSize: number | string (default: 24)
+- color: string (default: 'currentColor')
 */
 
 // Usage example:
-// import { ReactComponent as MyCustomSvg } from '../../assets/icons/my-icon.svg';
+// import StarIcon from '../../assets/icons/star.svg?react';
 // import { Icon } from './Icon';
-// <Icon icon={MyCustomSvg} className="w-6 h-6 text-blue-500" />
+// <Icon icon={StarIcon} fontSize={32} color="red" />
 
 import React from 'react';
+import AntIcon from '@ant-design/icons';
 
-export interface IconProps extends React.SVGProps<SVGSVGElement> {
+export interface IconProps {
   icon: React.FunctionComponent<React.SVGProps<SVGSVGElement>>;
   className?: string;
+  style?: React.CSSProperties;
+  fontSize?: number | string;
+  color?: string;
 }
 
-export const Icon: React.FC<IconProps> = ({ icon: IconComponent, className = '', ...rest }) => (
-  <IconComponent className={className} {...rest} />
+export const Icon: React.FC<IconProps> = ({
+  icon: IconComponent,
+  className = '',
+  style = {},
+  fontSize = 24,
+  color = 'currentColor',
+}) => (
+  <AntIcon component={IconComponent} className={className} style={{ fontSize, color, ...style }} />
 );
