@@ -5,7 +5,20 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        manrope: ['Manrope', 'sans-serif'],
+        releway: ['Releway', 'sans-serif'],
+        moserat: ['Monserat', 'sans-serif'],  
+      },
+      fontWeight: {
+        regular: '400',
+        medium: '500',
+        semibold: '600',
+        bold: '700',
+        extrabold: '800',
+      }
+    },
   },
   plugins: [require('@tailwindcss/aspect-ratio'),
   ],
