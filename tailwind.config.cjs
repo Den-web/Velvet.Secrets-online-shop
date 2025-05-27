@@ -1,3 +1,5 @@
+// const { default: TabPane } = require('antd/es/tabs/TabPane');
+
 // tailwind.config.cjs
 module.exports = {
   content: [

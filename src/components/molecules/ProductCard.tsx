@@ -5,6 +5,7 @@ import type { Product } from '../../store/productsApi';
 
 interface ProductCardProps {
   product: Product;
+  className?: string;
 }
 
 export const ProductCard: React.FC<ProductCardProps> = ({ product }) => (
@@ -15,16 +16,17 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => (
       <Image
         src={product.image || '/fallback.jpg'}
         alt={product.name || ''}
-        className="product-card-image"
+        className="product-card-image rounded object-cover"
       />
     }
   >
     <div className="product-card-content">
-      <div className="product-card-title">{product.name}</div>
-      <div className="product-card-price">
+      <div className="product-card-title font-manrope font-bold text-[20px] leading-[1.5] text-[#121212] mb-2.5">
+        {product.name}
+      </div>
+      <div className="product-card-price font-manrope font-regular text-[18px] leading-[1.3] text-[#121212]">
         {typeof product.price === 'number' ? `${product.price} UAH` : '—'}
       </div>
-      {product.description && <div className="product-card-description">{product.description}</div>}
     </div>
   </Card>
 );
