@@ -1,18 +1,19 @@
 import React from 'react';
 import { Image } from 'antd';
 import { Link } from 'react-router-dom';
-import reactLogo from '../../assets/react.svg';
+// import reactLogo from '../../assets/react.svg';
+import HeaderLogo from '../../assets/icons/headerLogo/logo-light.svg';
 
 const Logo: React.FC = () => (
   <Link to="/" className="flex items-center mr-4">
     <Image
-      src={reactLogo}
+      src={HeaderLogo}
       alt="Logo"
-      width={48}
-      height={48}
+      width={104}
+      height={46}
       preview={false}
-      className="hover:scale-110 transition-transform"
-      style={{ width: 48, height: 48 }}
+      // className=""
+      style={{ width: 104, height: 46 }}
     />
   </Link>
 );
