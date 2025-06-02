@@ -1,5 +1,6 @@
 import React from 'react';
 import { dropdownMenu } from '../../data/dropdownMenu';
+import Link from '../atoms/Link';
 
 const DropdownMenu: React.FC = () => {
   return (
@@ -16,14 +17,9 @@ const DropdownMenu: React.FC = () => {
 
             {/* Список посилань */}
             <ul className="space-y-2 text-sm">
-              {block.links.map((link, i) => (
+              {block.links.map((linkText, i) => (
                 <li key={i}>
-                  <a
-                    href="#"
-                    className="text-black border-b-2 border-transparent hover:border-[#c31f5c] focus:border-[#c31f5c] hover:text-[#c31f5c] focus:text-[#c31f5c] transition-all duration-200 underline-offset-4"
-                  >
-                    {link}
-                  </a>
+                  <Link href="#">{linkText}</Link>
                 </li>
               ))}
             </ul>

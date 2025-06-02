@@ -3,8 +3,8 @@ import AntIcon from '@ant-design/icons';
 
 export interface IconProps {
   icon:
-    | React.FunctionComponent<React.SVGProps<SVGSVGElement>> // для SVG
-    | React.ComponentType<React.SVGProps<SVGSVGElement>>; // для Ant Design
+    | React.FunctionComponent<React.SVGProps<SVGSVGElement>>
+    | React.ComponentType<React.SVGProps<SVGSVGElement>>;
   className?: string;
   style?: React.CSSProperties;
   fontSize?: number | string;
