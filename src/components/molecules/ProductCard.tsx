@@ -16,7 +16,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => (
       <Image
         src={product.image || '/fallback.jpg'}
         alt={product.name || ''}
-        className="product-card-image rounded object-cover"
+        className="product-card-image rounded object-contain"
       />
     }
   >
