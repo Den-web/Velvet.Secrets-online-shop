@@ -3,42 +3,65 @@ import { ProductCard } from '../molecules/ProductCard';
 import { simpleProducts } from '../../data/products';
 import type { Product } from '../../store/productsApi';
 import { ShowAllButton } from '../atoms/ShowAllButton';
+import { Title } from '../atoms/Title';
+import { Text } from '../atoms/Text';
+import { Image } from '../atoms/Image';
+
+const BESTSELLERS_IMAGE = {
+  src: '/src/assets/imagesSection2/image-main@2x.jpg',
+  alt: 'Жіноча білизна — головне зображення секції бестселерів',
+} as const;
+
+const BESTSELLERS_CONTENT = {
+  title: 'Бестселлери',
+  description: 'Кожен вибирає ці бра - ти наступна',
+  emptyMessage: 'Немає бестселерів для показу.',
+} as const;
+
+interface ProductGridProps {
+  products: Product[];
+}
+
+const ProductGrid: React.FC<ProductGridProps> = ({ products }) => (
+  <div className="bestsellers-list grid grid-cols-2 gap-5 mb-7">
+    {products.length > 0 ? (
+      products.map((product) => <ProductCard product={product} key={product.id} />)
+    ) : (
+      <Text>{BESTSELLERS_CONTENT.emptyMessage}</Text>
+    )}
+  </div>
+);
 
 export const BestsellersSection: React.FC = () => (
-  <section
-    aria-labelledby="bestsellers-title"
-    className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] bg-white overflow-visible"
-  >
-    <div className="flex flex-col md:flex-row py-24">
-      <div className="flex flex-col md:flex-row gap-5 w-full">
-        <figure className="w-full md:w-1/2">
-          <img
-            src="/src/assets/imagesSection2/image-main@2x.jpg"
-            alt="Жіноча білизна — головне зображення секції бестселерів"
-            className="rounded w-full h-full object-cover"
+  <section aria-labelledby="bestsellers-title" className="w-full bg-white relative">
+    <div className="flex flex-col md:flex-row">
+      {/* Image Section */}
+      <div className="w-full md:w-1/2 relative">
+        <div className="w-full h-full">
+          <Image
+            src={BESTSELLERS_IMAGE.src}
+            alt={BESTSELLERS_IMAGE.alt}
+            className="w-full h-full object-cover"
           />
-        </figure>
+        </div>
+      </div>
 
-        <div className="w-full md:w-1/2 py-10 pr-8">
-          <h2
+      {/* Content Section */}
+      <div className="w-full md:w-1/2">
+        <div className="max-w-[600px] py-24 pl-8 pr-4">
+          <Title
             id="bestsellers-title"
+            level={2}
             className="font-manrope font-bold text-[36px] leading-[1.2] text-grey6 mb-2.5"
           >
-            Бестселлери
-          </h2>
-          <p className="font-manrope font-regular text-[18px] leading-[1.5] text-grey6 mb-7">
-            Кожен вибирає ці бра - ти наступна
-          </p>
+            {BESTSELLERS_CONTENT.title}
+          </Title>
 
-          <div className="bestsellers-list grid grid-cols-2 md:grid-cols-2 gap-5 mb-7">
-            {simpleProducts.length > 0 ? (
-              simpleProducts.map((product: Product) => (
-                <ProductCard product={product} key={product.id} />
-              ))
-            ) : (
-              <p>Немає бестселерів для показу.</p>
-            )}
-          </div>
+          <Text className="font-manrope font-regular text-[18px] leading-[1.5] text-grey6 mb-7 block">
+            {BESTSELLERS_CONTENT.description}
+          </Text>
+
+          <ProductGrid products={simpleProducts} />
 
           <ShowAllButton className="self-start font-manrope font-bold text-[20px] leading-[1] text-grey6 py-6 px-10 rounded border-2 border-solid border-pink5 hover:border-pink5 bg-white hover:bg-pink5 hover:text-white transition delay-150 duration-300 ease-in-out" />
         </div>
@@ -46,52 +69,3 @@ export const BestsellersSection: React.FC = () => (
     </div>
   </section>
 );
-
-// import React from 'react';
-// import { ProductCard } from '../molecules/ProductCard';
-// import { simpleProducts } from '../../data/products';
-// import type { Product } from '../../store/productsApi';
-// import { ShowAllButton } from '../atoms/ShowAllButton';
-
-// export const BestsellersSection: React.FC = () => (
-//   <section
-//     aria-labelledby="bestsellers-title"
-//     className="w-full flex mt-6 h-screen bg-white justify-between"
-//   >
-//     <div className="">
-//       <div className="flex w-2/4 mt-20">
-//         <figure className="w-full md:w-1/2">
-//           <img
-//             src="/src/assets/imagesSection2/image-main@2x.jpg"
-//             alt="Жіноча білизна — головне зображення секції бестселерів"
-//             className="rounded w-full h-full object-cover"
-//           />
-//         </figure>
-
-//         <div className="relative w-2/4 text-left mt-12">
-//           <h2
-//             id="bestsellers-title"
-//             className="text-3xl font-black mt-60"
-//           >
-//             Бестселлери
-//           </h2>
-//           <p className="text-medium-grey text-lg my-12">
-//             Кожен вибирає ці бра - ти наступна
-//           </p>
-
-//           <div className="bestsellers-list grid grid-cols-2 md:grid-cols-2 gap-5 mb-7">
-//             {simpleProducts.length > 0 ? (
-//               simpleProducts.map((product: Product) => (
-//                 <ProductCard product={product} key={product.id} />
-//               ))
-//             ) : (
-//               <p>Немає бестселерів для показу.</p>
-//             )}
-//           </div>
-
-//           <ShowAllButton className="self-start font-manrope font-bold text-[20px] leading-[1] text-grey6 py-6 px-10 rounded border-2 border-solid border-pink5 hover:border-pink5 bg-white hover:bg-pink5 hover:text-white transition delay-150 duration-300 ease-in-out" />
-//         </div>
-//       </div>
-//     </div>
-//   </section>
-// );
