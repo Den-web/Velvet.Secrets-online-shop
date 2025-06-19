@@ -6,10 +6,10 @@ type MainTemplateProps = {
 };
 
 const MainTemplate: React.FC<MainTemplateProps> = ({ children }) => (
-  <div className="min-h-screen w-full flex flex-col bg-gray-50 dark:bg-neutral-900">
+  <div className="min-h-screen w-full flex flex-col bg-white">
     <Navigation />
-    <div className="flex-1 flex flex-col items-center justify-center">
-      <main className="container mx-auto px-4 py-8 flex-1 w-full">{children}</main>
+    <div className="flex-1 flex flex-col">
+      <main className="flex-1 w-full">{children}</main>
     </div>
   </div>
 );
