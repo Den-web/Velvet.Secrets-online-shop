@@ -20,11 +20,13 @@
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@types/react-router-dom": "^5.3.3",
     "antd": "^5.25.3",
+    "embla-carousel-react": "^8.6.0",
     "prettier": "^3.5.3",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-redux": "^9.2.0",
-    "react-router-dom": "^7.5.3"
+    "react-router-dom": "^7.5.3",
+    "swiper": "^11.2.8"
   },
   "devDependencies": {
     "@eslint/js": "^9.25.0",
