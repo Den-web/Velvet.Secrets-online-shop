@@ -11,7 +11,6 @@ export interface IconProps {
   color?: string;
 }
 
-
 const Icon: React.FC<IconProps> = ({
   icon,
   className = '',
