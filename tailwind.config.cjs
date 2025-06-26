@@ -1,6 +1,6 @@
 // tailwind.config.cjs
 module.exports = {
-  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx,css}'],
   theme: {
     screens: {
       sm: '375px',
