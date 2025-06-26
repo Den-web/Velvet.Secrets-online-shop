@@ -1,0 +1,26 @@
+.carousel-slide > div {
+  padding: 0 8px;
+}
+
+.carousel-slide > div > div {
+  min-width: calc((100% / 3) - 16px);
+}
+
+.my-btn {
+  padding: 14px 26px;
+  border-radius: 0.5rem;
+  font-weight: 700;
+  font-family: 'Manrope', sans-serif;
+  font-size: 20px;
+  line-height: 1;
+  background-color: white;
+  color: #121212;
+  border: 2px solid #C31F5C;
+  transition: all 0.3s ease-in-out;
+}
+.my-btn:hover,
+.my-btn:focus {
+  background-color: #C31F5C;
+  color: white;
+  border-color: #C31F5C;
+}
