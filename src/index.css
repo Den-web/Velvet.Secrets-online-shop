@@ -79,3 +79,14 @@ html, body {
   width: 100%;
   box-sizing: border-box;
 }
+
+.custom-carousel-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.custom-carousel-dots li {
+  list-style: none;
+}
