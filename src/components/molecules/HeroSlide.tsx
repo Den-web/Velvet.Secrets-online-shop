@@ -64,11 +64,8 @@ const HeroSlide: React.FC<HeroSlideProps> = ({ title, subtitle, image, screen })
           `}
         >
           <Button
-            className={`
-    bg-pink5 text-white font-medium border border-transparent transition-all duration-300
-    hover:bg-white hover:border-pink5 hover:text-grey6
+            className={` custom-button-hero
     text-[16px] md:text-[16px] lg:text-[20px]
-    shadow-[0_2px_0_0_rgba(195,31,92,0.1)]
     ${
       screen === 'desktop'
         ? 'w-[246px] h-[48px] px-10 py-5'

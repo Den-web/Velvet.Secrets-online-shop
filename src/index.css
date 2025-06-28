@@ -77,3 +77,21 @@ body {
   width: 100%;
   box-sizing: border-box;
 }
+
+/* index.css або global.css */
+
+.custom-button-hero {
+  background-color: #f23978 !important; /* рожевий */
+  color: #ffffff !important; /* білий */
+  font-weight: 500;
+  border: 1px solid transparent !important;
+  box-shadow: 0 2px 0 0 rgba(195, 31, 92, 0.1) !important;
+  transition: all 0.3s ease !important;
+  outline: none !important;
+}
+
+.custom-button-hero:hover {
+  background-color: #ffffff !important;
+  color: #4b4b4b !important;
+  border: 1px solid #f23978 !important;
+}
