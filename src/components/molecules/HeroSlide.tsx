@@ -1,4 +1,3 @@
-// components/molecules/HeroSlide.tsx
 import React from 'react';
 import Button from '../atoms/Button';
 
@@ -16,19 +15,24 @@ const HeroSlide: React.FC<HeroSlideProps> = ({ title, subtitle, image }) => {
     >
       <div
         className={`
-          absolute text-white font-manrope flex flex-col justify-start gap-[20px] text-center
-          items-center left-1/2 -translate-x-1/2 top-[307px] w-[278px] h-[198px]
+          absolute text-white font-manrope flex flex-col justify-start items-center text-center
+          left-1/2 -translate-x-1/2 top-[307px] w-[278px] h-[198px]
 
           md:items-start md:text-left md:left-[30px] md:translate-x-0 md:top-[319px] md:w-[330px] md:h-[212px]
-          lg:left-[352px] lg:top-[315px] lg:w-[616px] lg:h-[270px] lg:gap-[30px]
+          lg:left-[352px] lg:top-[315px] lg:w-[616px] lg:h-[270px]
         `}
       >
-        <div className="flex flex-col items-center gap-[10px] md:items-start">
-          <h1 className="font-extrabold text-[24px] md:text-[32px] lg:text-5xl">{title}</h1>
-          <p className="font-medium text-sm md:text-sm lg:text-base">{subtitle}</p>
-        </div>
+        {/* Загальний блок для контенту з адаптивним gap */}
+        <div className="flex flex-col items-center md:items-start gap-[20px] md:gap-[30px] lg:gap-[30px]">
+          {/* Title + Subtitle */}
+          <div className="flex flex-col items-center md:items-start gap-[10px] md:gap-[20px] lg:gap-[20px]">
+            <h1 className="font-extrabold text-[24px] md:text-[32px] lg:text-5xl">{title}</h1>
+            <p className="font-medium text-sm md:text-[16px] md:leading-[24px] lg:text-[24px] lg:leading-[36px]">
+              {subtitle}
+            </p>
+          </div>
 
-        <div className="flex flex-col gap-[8px] items-center md:items-start justify-center">
+          {/* Кнопка */}
           <Button
             className={`
               custom-button-hero
