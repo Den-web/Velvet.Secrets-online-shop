@@ -1,4 +1,3 @@
-// src/data/heroSlides.ts
 import desktop1 from '../assets/icons/hero/desktop-img1.jpg';
 import desktop2 from '../assets/icons/hero/desktop-img2.jpg';
 import desktop3 from '../assets/icons/hero/desktop-img3.jpg';
