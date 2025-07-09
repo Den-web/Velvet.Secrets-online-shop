@@ -31,10 +31,10 @@ const MainTemplate: React.FC<MainTemplateProps> = ({ children }) => (
   <div className="min-h-screen w-full flex flex-col bg-white">
     <Navigation />
     <HeroCarousel />
-    <DressWithLove />
     <div className="flex-1 flex flex-col">
       <main className="flex-1 w-full">{children}</main>
     </div>
+    <DressWithLove />
   </div>
 );
 

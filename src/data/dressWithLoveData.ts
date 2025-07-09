@@ -10,29 +10,26 @@ import {
   dressWithLoveMobileCarouse2,
   dressWithLoveMobileCarouse3,
 } from '../assets/icons/index';
-export const dressWithLoveSlides = [
-  {
-    title: 'Одягайся з любов’ю до себе',
-    subtitle: 'М’яка білизна, затишний одяг і натхнення для твого щоденного комфорту.',
-    desktop: dressWithLoveDesktopCarousel1,
-    tablet: dressWithLoveTabletCarouse1,
-    mobile: dressWithLoveMobileCarouse1,
-    desktopSideImage: dressWithLoveDesktop,
-  },
-  {
-    title: 'Одягайся з любов’ю до себе',
-    subtitle: 'М’яка білизна, затишний одяг і натхнення для твого щоденного комфорту.',
-    desktop: dressWithLoveDesktopCarousel2,
-    tablet: dressWithLoveTabletCarouse2,
-    mobile: dressWithLoveMobileCarouse2,
-    desktopSideImage: dressWithLoveDesktop,
-  },
-  {
-    title: 'Одягайся з любов’ю до себе',
-    subtitle: 'М’яка білизна, затишний одяг і натхнення для твого щоденного комфорту.',
-    desktop: dressWithLoveDesktopCarousel3,
-    tablet: dressWithLoveTabletCarouse3,
-    mobile: dressWithLoveMobileCarouse3,
-    desktopSideImage: dressWithLoveDesktop,
-  },
-];
+
+export const dressWithLoveData = {
+  title: 'Одягайся з любов’ю до себе',
+  subtitle: 'М’яка білизна, затишний одяг і натхнення для твого щоденного комфорту.',
+  desktopSideImage: dressWithLoveDesktop,
+  slides: [
+    {
+      desktop: dressWithLoveDesktopCarousel1,
+      tablet: dressWithLoveTabletCarouse1,
+      mobile: dressWithLoveMobileCarouse1,
+    },
+    {
+      desktop: dressWithLoveDesktopCarousel2,
+      tablet: dressWithLoveTabletCarouse2,
+      mobile: dressWithLoveMobileCarouse2,
+    },
+    {
+      desktop: dressWithLoveDesktopCarousel3,
+      tablet: dressWithLoveTabletCarouse3,
+      mobile: dressWithLoveMobileCarouse3,
+    },
+  ],
+};
