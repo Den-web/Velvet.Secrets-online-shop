@@ -1,6 +1,6 @@
 import React from 'react';
 import BaseCarousel from './BaseCarousel';
-// import { Title } from '../atoms/Title';
+import { Title } from '../atoms/Title';
 import { Text } from '../atoms/Text';
 import Button from '../atoms/Button';
 import { dressWithLoveData } from '../../data/dressWithLoveData';
@@ -14,10 +14,14 @@ const DressWithLoveCarousel: React.FC = () => {
       <div className="w-full lg:flex-1 px-[30px] lg:pl-[352px] lg:pr-[20px] flex items-center">
         <div className="flex flex-col w-full py-[40px] items-center text-center md:items-start md:text-left lg:w-[598px] gap-[30px]">
           {/* Title + Text block */}
-          <div className="flex flex-col gap-[10px] lg:gap-[20px] w-full">
-            <h2 className="text-[20px] leading-[24px] font-bold text-grey6 md:text-[28px] md:leading-[33.6px] lg:text-[clamp(28px,2vw,36px)] lg:leading-[1.2]">
+          <div className="flex flex-col w-full">
+            <Title
+              level={2}
+              className="font-manrope text-[20px] font-bold md:text-[28px] lg:text-[36px] lg:font-semibold"
+            >
               {title}
-            </h2>
+            </Title>
+
             <Text className="text-[14px] leading-[22.4px] font-normal text-grey6 md:text-[16px] md:leading-[20.8px] lg:text-[clamp(16px,1.2vw,18px)] lg:leading-[1.5]">
               {subtitle}
             </Text>

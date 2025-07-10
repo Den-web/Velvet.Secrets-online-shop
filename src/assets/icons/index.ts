@@ -11,9 +11,7 @@ import mobile1 from './hero/mobile-img1.jpg';
 import mobile2 from './hero/mobile-img2.jpg';
 import mobile3 from './hero/mobile-img3.jpg';
 
-export { desktop1, desktop2, desktop3, tablet1, tablet2, tablet3, mobile1, mobile2, mobile3 };
-
-// DressWithLove // images Section 3 Dress with love
+// DressWithLove // images Section 3
 import dressWithLoveDesktop from './dressWithLove/dressWithLoveDesktop.jpg';
 import dressWithLoveDesktopCarousel1 from './dressWithLove/dressWithLoveDesktopCarusel1.jpg';
 import dressWithLoveDesktopCarousel2 from './dressWithLove/dressWithLoveDesktopCarusel2.jpg';
@@ -28,6 +26,17 @@ import dressWithLoveMobileCarouse2 from './dressWithLove/dressWithLoveMobileCaro
 import dressWithLoveMobileCarouse3 from './dressWithLove/dressWithLoveMobileCarouse3.jpg';
 
 export {
+  // Hero impor Images
+  desktop1,
+  desktop2,
+  desktop3,
+  tablet1,
+  tablet2,
+  tablet3,
+  mobile1,
+  mobile2,
+  mobile3,
+  // DressWithLove // images Section 3
   dressWithLoveDesktop,
   dressWithLoveDesktopCarousel1,
   dressWithLoveDesktopCarousel2,
