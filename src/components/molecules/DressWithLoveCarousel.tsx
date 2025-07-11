@@ -13,7 +13,6 @@ const DressWithLoveCarousel: React.FC = () => {
       {/* LEFT BLOCK */}
       <div className="w-full lg:flex-1 px-[30px] lg:pl-[352px] lg:pr-[20px] flex items-center">
         <div className="flex flex-col w-full py-[40px] items-center text-center md:items-start md:text-left lg:w-[598px] gap-[30px]">
-          {/* Title + Text block */}
           <div className="flex flex-col w-full">
             <Title
               level={2}
