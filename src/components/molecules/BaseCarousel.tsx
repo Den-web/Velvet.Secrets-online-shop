@@ -12,23 +12,37 @@ const BaseCarousel: React.FC<BaseCarouselProps> = ({ children, className = '' })
   const carouselRef = useRef<CarouselRef>(null);
   const [currentSlide, setCurrentSlide] = useState(0);
 
+  const isFirstSlide = currentSlide === 0;
+  const isLastSlide = currentSlide === children.length - 1;
+
   const goTo = (index: number) => {
-    if (carouselRef.current) {
-      carouselRef.current.goTo(index);
-    }
+    carouselRef.current?.goTo(index);
   };
 
   const handleNext = () => {
-    if (currentSlide < children.length - 1) {
+    if (!isLastSlide) {
       goTo(currentSlide + 1);
     }
   };
 
   const handlePrev = () => {
-    if (currentSlide > 0) {
+    if (!isFirstSlide) {
       goTo(currentSlide - 1);
     }
   };
+
+  const baseBtnClasses = `
+    absolute top-1/2 -translate-y-1/2 z-10 w-6 h-6 flex items-center justify-center
+    rounded-full bg-[#C2185B] text-white text-[12px] transition-opacity
+  `;
+
+  const prevButtonClasses = `${baseBtnClasses} left-2 ${
+    isFirstSlide ? 'opacity-30 cursor-not-allowed' : 'opacity-100'
+  }`;
+
+  const nextButtonClasses = `${baseBtnClasses} right-2 ${
+    isLastSlide ? 'opacity-30 cursor-not-allowed' : 'opacity-100'
+  }`;
 
   return (
     <div className={`relative ${className}`}>
@@ -36,27 +50,11 @@ const BaseCarousel: React.FC<BaseCarouselProps> = ({ children, className = '' })
         {children}
       </Carousel>
 
-      {/* Prev Button */}
-      <button
-        className={`absolute top-1/2 left-2 -translate-y-1/2 z-10 w-6 h-6 flex items-center justify-center
-    rounded-full bg-[#C2185B] text-white text-[12px]
-    transition-opacity ${currentSlide === 0 ? 'opacity-30 cursor-not-allowed' : 'opacity-100'}`}
-        onClick={handlePrev}
-        disabled={currentSlide === 0}
-      >
+      <button className={prevButtonClasses} onClick={handlePrev} disabled={isFirstSlide}>
         <LeftOutlined />
       </button>
 
-      {/* Next Button */}
-      <button
-        className={`absolute top-1/2 right-2 -translate-y-1/2 z-10 w-6 h-6 flex items-center justify-center
-    rounded-full bg-[#C2185B] text-white text-[12px]
-    transition-opacity ${
-      currentSlide === children.length - 1 ? 'opacity-30 cursor-not-allowed' : 'opacity-100'
-    }`}
-        onClick={handleNext}
-        disabled={currentSlide === children.length - 1}
-      >
+      <button className={nextButtonClasses} onClick={handleNext} disabled={isLastSlide}>
         <RightOutlined />
       </button>
     </div>
