@@ -14,6 +14,7 @@ import {
 export const dressWithLoveData = {
   title: 'Одягайся з любов’ю до себе',
   subtitle: 'М’яка білизна, затишний одяг і натхнення для твого щоденного комфорту.',
+  buttonText: 'Обрати комфорт',
   desktopSideImage: dressWithLoveDesktop,
   slides: [
     {
