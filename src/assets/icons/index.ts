@@ -26,7 +26,6 @@ import dressWithLoveMobileCarouse2 from './dressWithLove/dressWithLoveMobileCaro
 import dressWithLoveMobileCarouse3 from './dressWithLove/dressWithLoveMobileCarouse3.jpg';
 
 export {
-  // Hero impor Images
   desktop1,
   desktop2,
   desktop3,
@@ -36,7 +35,6 @@ export {
   mobile1,
   mobile2,
   mobile3,
-  // DressWithLove // images Section 3
   dressWithLoveDesktop,
   dressWithLoveDesktopCarousel1,
   dressWithLoveDesktopCarousel2,
