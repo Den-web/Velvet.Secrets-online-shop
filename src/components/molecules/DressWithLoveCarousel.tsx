@@ -42,7 +42,7 @@ const DressWithLoveCarousel: React.FC = () => {
               <BaseCarousel>{renderedSlides}</BaseCarousel>
             </div>
 
-            <Button className="w-[185px] h-[44px] px-[26px] py-[14px] flex flex-col justify-center items-center gap-2 text-base custom-btn-dressWithLove mx-auto lg:mx-0">
+            <Button className="custom-btn-dressWithLove bg-pink5 text-white w-[185px] h-[44px] px-[26px] py-[14px] flex flex-col justify-center items-center gap-2 text-base custom-btn-dressWithLove mx-auto lg:mx-0">
               {buttonText}
             </Button>
           </div>

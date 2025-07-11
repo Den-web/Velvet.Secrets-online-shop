@@ -69,13 +69,8 @@ body {
   box-sizing: border-box;
 }
 
-
-/* custom-button */
-
 .custom-button-hero,
 .custom-btn-dressWithLove {
-  background-color: #f23978 !important;
-  color: #ffffff !important;
   font-weight: 500;
   border: 1px solid transparent !important;
   box-shadow: 0 2px 0 0 rgba(195, 31, 92, 0.1) !important;

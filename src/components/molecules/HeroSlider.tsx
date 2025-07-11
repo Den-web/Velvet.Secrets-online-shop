@@ -27,7 +27,7 @@ const HeroSlide: React.FC<HeroSlideProps> = ({ title, subtitle, desktop, tablet,
             </p>
           </div>
 
-          <Button className="custom-button-hero text-base lg:text-xl w-52 h-11 px-6 py-3 md:w-52 md:h-11 md:px-10 md:py-5 lg:w-60 lg:h-12 lg:px-10 lg:py-5">
+          <Button className="custom-button-hero text-base bg-pink5 text-white lg:text-xl w-52 h-11 px-6 py-3 md:w-52 md:h-11 md:px-10 md:py-5 lg:w-60 lg:h-12 lg:px-10 lg:py-5">
             Дивитися колекцію
           </Button>
         </div>
