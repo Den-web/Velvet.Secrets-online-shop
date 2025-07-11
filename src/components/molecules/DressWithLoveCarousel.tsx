@@ -50,7 +50,7 @@ const DressWithLoveCarousel: React.FC = () => {
       </div>
 
       {desktopSideImage && (
-        <div className="hidden lg:block flex-shrink-0 w-[950px]">
+        <div className="hidden lg:block flex-shrink-0 w-full max-w-[950px]">
           <img
             src={desktopSideImage}
             alt="Dress with Love"
