@@ -1,4 +1,3 @@
-// Hero impor Images
 import desktop1 from './hero/desktop-img1.jpg';
 import desktop2 from './hero/desktop-img2.jpg';
 import desktop3 from './hero/desktop-img3.jpg';
@@ -11,7 +10,6 @@ import mobile1 from './hero/mobile-img1.jpg';
 import mobile2 from './hero/mobile-img2.jpg';
 import mobile3 from './hero/mobile-img3.jpg';
 
-// DressWithLove // images Section 3
 import dressWithLoveDesktop from './dressWithLove/dressWithLoveDesktop.jpg';
 import dressWithLoveDesktopCarousel1 from './dressWithLove/dressWithLoveDesktopCarusel1.jpg';
 import dressWithLoveDesktopCarousel2 from './dressWithLove/dressWithLoveDesktopCarusel2.jpg';
