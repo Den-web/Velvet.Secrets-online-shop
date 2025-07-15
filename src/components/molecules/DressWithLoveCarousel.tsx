@@ -20,11 +20,17 @@ const DressWithLoveCarousel: React.FC = () => {
     </picture>
   ));
 
+  const desktopImageBlock = desktopSideImage && (
+    <div className="hidden lg:block flex-shrink-0 w-full max-w-[950px]">
+      <img src={desktopSideImage} alt="Dress with Love" className="w-full h-full object-cover" />
+    </div>
+  );
+
   return (
     <div className="max-w-[1920px] mx-auto flex flex-col lg:flex-row">
       <div className="w-full lg:flex-1 px-[30px] lg:pl-[352px] lg:pr-[20px] flex items-center">
         <div className="flex flex-col w-full py-[40px] items-center text-center md:items-start md:text-left lg:w-[598px] gap-[30px]">
-          <div className="flex flex-col w-full">
+          <div className="flex flex-col w-full gap-[10px]">
             <Title
               level={2}
               className="font-manrope text-[20px] font-bold md:text-[28px] lg:text-[36px] lg:font-semibold"
@@ -42,22 +48,13 @@ const DressWithLoveCarousel: React.FC = () => {
               <BaseCarousel>{renderedSlides}</BaseCarousel>
             </div>
 
-            <Button className="custom-btn-dressWithLove bg-pink5 text-white w-[185px] h-[44px] px-[26px] py-[14px] flex flex-col justify-center items-center gap-2 text-base custom-btn-dressWithLove mx-auto lg:mx-0">
+            <Button className="custom-btn-dressWithLove bg-pink5 text-white w-[185px] h-[44px] px-[26px] py-[14px] flex flex-col justify-center items-center gap-2 text-base mx-auto lg:mx-0">
               {buttonText}
             </Button>
           </div>
         </div>
       </div>
-
-      {desktopSideImage && (
-        <div className="hidden lg:block flex-shrink-0 w-full max-w-[950px]">
-          <img
-            src={desktopSideImage}
-            alt="Dress with Love"
-            className="w-full h-full object-cover"
-          />
-        </div>
-      )}
+      {desktopImageBlock}
     </div>
   );
 };

@@ -11,6 +11,7 @@ const HeroCarousel: React.FC = () => {
           key={index}
           title={slide.title}
           subtitle={slide.subtitle}
+          buttonText={slide.buttonText}
           desktop={slide.desktop}
           tablet={slide.tablet}
           mobile={slide.mobile}
