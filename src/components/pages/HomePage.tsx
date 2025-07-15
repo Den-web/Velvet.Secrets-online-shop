@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { BestsellersSection } from '../organisms/BestsellersSection';
+import MainTemplate from '../templates/MainTemplate';
 
-const HomePage: React.FC = () => <BestsellersSection />;
+const HomePage: React.FC = () => <MainTemplate />;
 
 export default HomePage;

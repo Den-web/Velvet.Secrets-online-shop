@@ -32,7 +32,7 @@ const ProductGrid: React.FC<ProductGridProps> = ({ products }) => (
   </div>
 );
 
-export const BestsellersSection: React.FC = () => (
+const BestsellersSection: React.FC = () => (
   <section aria-labelledby="bestsellers-title" className="w-full bg-white relative">
     <div className="flex flex-col md:flex-row">
       {/* Image Section */}
@@ -69,3 +69,5 @@ export const BestsellersSection: React.FC = () => (
     </div>
   </section>
 );
+
+export default BestsellersSection;

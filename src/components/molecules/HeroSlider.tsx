@@ -4,12 +4,20 @@ import Button from '../atoms/Button';
 interface HeroSlideProps {
   title: string;
   subtitle: string;
+  buttonText: string;
   desktop: string;
   tablet: string;
   mobile: string;
 }
 
-const HeroSlide: React.FC<HeroSlideProps> = ({ title, subtitle, desktop, tablet, mobile }) => {
+const HeroSlide: React.FC<HeroSlideProps> = ({
+  title,
+  subtitle,
+  buttonText,
+  desktop,
+  tablet,
+  mobile,
+}) => {
   return (
     <div className="w-full min-h-screen sm:min-h-[812px] md:min-h-[850px] lg:min-h-[900px] relative flex items-center">
       <picture className="absolute inset-0 w-full h-full z-0">
@@ -27,8 +35,8 @@ const HeroSlide: React.FC<HeroSlideProps> = ({ title, subtitle, desktop, tablet,
             </p>
           </div>
 
-          <Button className="custom-button-hero text-base lg:text-xl w-52 h-11 px-6 py-3 md:w-52 md:h-11 md:px-10 md:py-5 lg:w-60 lg:h-12 lg:px-10 lg:py-5">
-            Дивитися колекцію
+          <Button className="custom-button-hero text-base bg-pink5 text-white lg:text-xl w-52 h-11 px-6 py-3 md:w-52 md:h-11 md:px-10 md:py-5 lg:w-60 lg:h-12 lg:px-10 lg:py-5">
+            {buttonText}
           </Button>
         </div>
       </div>
