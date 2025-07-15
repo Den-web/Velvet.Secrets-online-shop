@@ -1,7 +1,7 @@
 import React from 'react';
 import Navigation from '../organisms/Navigation';
 import HeroCarousel from '../organisms/HeroCarousel';
-import { BestsellersSection } from '../organisms/BestsellersSection';
+import BestsellersSection from '../organisms/BestsellersSection';
 import DressWithLove from '../organisms/DressWithLove';
 
 const MainTemplate: React.FC = () => (
