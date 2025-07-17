@@ -1,12 +1,30 @@
 import React from 'react';
+import { Grid } from 'antd';
 import BaseCarousel from './BaseCarousel';
 import { Title } from '../atoms/Title';
 import { Text } from '../atoms/Text';
 import Button from '../atoms/Button';
 import { dressWithLoveData } from '../../data/dressWithLoveData';
 
+const { useBreakpoint } = Grid;
+
 const DressWithLoveCarousel: React.FC = () => {
-  const { title, subtitle, buttonText, slides, desktopSideImage } = dressWithLoveData;
+  const { title, subtitle, buttonText, slides, desktopSideImage } =
+    dressWithLoveData;
+
+  const screens = useBreakpoint();
+
+  let carouselTitleLevel: 1 | 2 | 3 | 4 | 5 = 4;
+
+  if (screens.sm && !screens.md) {
+    carouselTitleLevel = 4;
+  } else if (screens.md && !screens.lg) {
+    carouselTitleLevel = 2;
+  } else if (screens.lg) {
+    carouselTitleLevel = 1;
+  } else {
+    carouselTitleLevel = 4;
+  }
 
   const renderedSlides = slides.map((slide, index) => (
     <picture key={index} className="w-full h-full block">
@@ -22,7 +40,11 @@ const DressWithLoveCarousel: React.FC = () => {
 
   const desktopImageBlock = desktopSideImage && (
     <div className="hidden lg:block flex-shrink-0 w-full max-w-[950px]">
-      <img src={desktopSideImage} alt="Dress with Love" className="w-full h-full object-cover" />
+      <img
+        src={desktopSideImage}
+        alt="Dress with Love"
+        className="w-full h-full object-cover"
+      />
     </div>
   );
 
@@ -30,10 +52,10 @@ const DressWithLoveCarousel: React.FC = () => {
     <div className="max-w-[1920px] mx-auto flex flex-col lg:flex-row">
       <div className="w-full lg:flex-1 px-[30px] lg:pl-[352px] lg:pr-[20px] flex items-center">
         <div className="flex flex-col w-full py-[40px] items-center text-center md:items-start md:text-left lg:w-[598px] gap-[30px]">
-          <div className="flex flex-col w-full gap-[10px]">
+          <div className="flex flex-col w-full">
             <Title
-              level={2}
-              className="font-manrope text-[20px] font-bold md:text-[28px] lg:text-[36px] lg:font-semibold"
+              level={carouselTitleLevel}
+              className="font-manrope font-bold lg:font-semibold"
             >
               {title}
             </Title>
