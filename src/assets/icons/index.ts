@@ -23,6 +23,11 @@ import dressWithLoveMobileCarouse1 from './dressWithLove/dressWithLoveMobileCaro
 import dressWithLoveMobileCarouse2 from './dressWithLove/dressWithLoveMobileCarouse2.jpg';
 import dressWithLoveMobileCarouse3 from './dressWithLove/dressWithLoveMobileCarouse3.jpg';
 
+import forYourSpaceDesktopAndTablet from './forYourSpace/forYourSpaceDesktopAndTablet.jpg';
+import forYourSpaceMobile from './forYourSpace/forYourSpaceMobile.jpg';
+import forYourSpaceDiscounDesktopTablet from './forYourSpace/forYourSpaceDiscounDesktopTablet.png';
+import forYourSpaceDiscountMobile from './forYourSpace/forYourSpaceDiscountMobile.png';
+
 export {
   desktop1,
   desktop2,
@@ -43,4 +48,8 @@ export {
   dressWithLoveMobileCarouse1,
   dressWithLoveMobileCarouse2,
   dressWithLoveMobileCarouse3,
+  forYourSpaceDesktopAndTablet,
+  forYourSpaceMobile,
+  forYourSpaceDiscounDesktopTablet,
+  forYourSpaceDiscountMobile,
 };

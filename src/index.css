@@ -39,9 +39,10 @@ body {
 }
 
 .custom-button-hero,
-.custom-btn-dressWithLove {
-  font-weight: 500;
-  border: 1px solid transparent !important;
+.custom-btn-dressWithLove,
+.custom-btn-forYourSpace {
+  font-weight: 700;
+  border: 1px solid #c31f5c !important;
   box-shadow: 0 2px 0 0 rgba(195, 31, 92, 0.1) !important;
   transition: all 0.3s ease !important;
   outline: none !important;
@@ -51,5 +52,9 @@ body {
 .custom-btn-dressWithLove:hover {
   background-color: #ffffff !important;
   color: #121212 !important;
-  border: 1px solid #f23978 !important;
+}
+
+.custom-btn-forYourSpace:hover {
+  background-color: #c31f5c !important;
+  color: #ffffff !important;
 }
