@@ -1,26 +1,16 @@
 import React from 'react';
-import { Grid } from 'antd';
 import { Title } from '../atoms/Title';
 import { Text } from '../atoms/Text';
 import Button from '../atoms/Button';
 import { forYourSpaceData } from '../../data/forYourSpaceData';
-
-const { useBreakpoint } = Grid;
+import { useTitleLevels } from '../../helpers/responsiveUtils';
 
 const ForYourSpaceContent: React.FC = () => {
   const { title, subtitle, buttonText, images, discounts, discountValue } =
     forYourSpaceData;
 
-  const screens = useBreakpoint();
-
-  const ForYourSpacTitleLevel: 1 | 2 | 3 | 4 | 5 = screens.lg
-    ? 1
-    : screens.md
-      ? 2
-      : 4;
-
-  const DiscountTitleLevel: 1 | 2 | 3 | 4 | 5 =
-    screens.lg || screens.md ? 1 : 3;
+  const { screens, forYourSpaceTitleLevel, discountImageTitleLevel } =
+    useTitleLevels();
 
   const discountImage = screens.lg
     ? discounts.desktop
@@ -57,11 +47,8 @@ const ForYourSpaceContent: React.FC = () => {
         />
         <Title
           style={{ color: 'white' }}
-          level={DiscountTitleLevel}
-          className="
-    relative z-10 text-white text-center leading-none
-    font-extrabold font-manrope
-  "
+          level={discountImageTitleLevel}
+          className="relative z-10 text-white text-center leading-none font-extrabold font-manrope"
         >
           -{discountValue}%
         </Title>
@@ -73,50 +60,19 @@ const ForYourSpaceContent: React.FC = () => {
     <div className="flex flex-col lg:flex-row items-center w-full max-w-[1920px] px-5 py-[30px] md:px-[85px] md:py-[47px] lg:px-[352px] lg:gap-[20px]">
       {imageSection}
 
-      <div
-        className="
-          flex flex-col
-          md:items-start md:text-left
-          items-center text-center
-          lg:items-start lg:text-left
-          mt-[20px] lg:mt-0
-          w-full
-          md:px-0
-          max-w-[335px] md:max-w-[598px] lg:max-w-none
-        "
-      >
+      <div className="flex flex-col md:items-start md:text-left items-center text-center lg:items-start lg:text-left mt-[20px] lg:mt-0 w-full md:px-0 max-w-[335px] md:max-w-[598px] lg:max-w-none">
         <Title
-          level={ForYourSpacTitleLevel}
-          className="
-            text-grey6
-            font-bold md:font-bold lg:font-semibold
-            mb-[20px] lg:mb-[10px]
-          "
+          level={forYourSpaceTitleLevel}
+          className="text-grey6 font-bold md:font-bold lg:font-semibold mb-[20px] lg:mb-[10px]"
         >
           {title}
         </Title>
 
-        <Text
-          className="
-            text-grey6 font-normal
-            text-[14px] leading-[160%]
-            md:text-[16px] md:leading-[130%]
-            lg:text-[18px] lg:leading-[150%]
-            mt-0
-          "
-        >
+        <Text className="text-grey6 font-normal text-[14px] leading-[160%] md:text-[16px] md:leading-[130%] lg:text-[18px] lg:leading-[150%] mt-0">
           {subtitle}
         </Text>
 
-        <Button
-          className="
-            custom-btn-forYourSpace bg-transparent
-            flex justify-center items-center px-[26px] py-[14px]
-            w-[221px] h-[44px] text-[16px]
-            lg:w-[263px] lg:h-[48px] lg:text-[20px]
-            mt-[30px]
-          "
-        >
+        <Button className="custom-btn-forYourSpace bg-transparent flex justify-center items-center px-[26px] py-[14px] w-[221px] h-[44px] text-[16px] lg:w-[263px] lg:h-[48px] lg:text-[20px] mt-[30px]">
           {buttonText}
         </Button>
       </div>
