@@ -1,5 +1,6 @@
 import React from 'react';
 import { ProductCard } from '../molecules/ProductCard';
+import { ProductCarousel } from '../molecules/ProductCarousel';
 import { simpleProducts } from '../../data/products';
 import type { Product } from '../../store/productsApi';
 import { ShowAllButton } from '../atoms/ShowAllButton';
@@ -25,7 +26,9 @@ interface ProductGridProps {
 const ProductGrid: React.FC<ProductGridProps> = ({ products }) => (
   <div className="bestsellers-list grid grid-cols-2 gap-5 mb-7">
     {products.length > 0 ? (
-      products.map((product) => <ProductCard product={product} key={product.id} />)
+      products.map((product) => (
+        <ProductCard product={product} key={product.id} />
+      ))
     ) : (
       <Text>{BESTSELLERS_CONTENT.emptyMessage}</Text>
     )}
@@ -33,7 +36,10 @@ const ProductGrid: React.FC<ProductGridProps> = ({ products }) => (
 );
 
 const BestsellersSection: React.FC = () => (
-  <section aria-labelledby="bestsellers-title" className="w-full bg-white relative">
+  <section
+    aria-labelledby="bestsellers-title"
+    className="w-full bg-white relative"
+  >
     <div className="flex flex-col md:flex-row">
       {/* Image Section */}
       <div className="w-full md:w-1/2 relative">
@@ -61,7 +67,15 @@ const BestsellersSection: React.FC = () => (
             {BESTSELLERS_CONTENT.description}
           </Text>
 
-          <ProductGrid products={simpleProducts} />
+          {/* Desktop/Tablet: Grid Layout */}
+          <div className="hidden md:block">
+            <ProductGrid products={simpleProducts} />
+          </div>
+
+          {/* Mobile: Carousel Layout */}
+          <div className="md:hidden">
+            <ProductCarousel products={simpleProducts} />
+          </div>
 
           <ShowAllButton className="self-start font-manrope font-bold text-[20px] leading-[1] text-grey6 py-6 px-10 rounded border-2 border-solid border-pink5 hover:border-pink5 bg-white hover:bg-pink5 hover:text-white transition delay-150 duration-300 ease-in-out" />
         </div>
