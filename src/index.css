@@ -90,3 +90,38 @@ html, body {
 .custom-carousel-dots li {
   list-style: none;
 }
+
+.slick-slide {
+  height: auto;
+  /* display: flex !important; */
+  justify-content: center;
+  align-items: center;
+  width: 220px; /* ширина слайда — подстраивай под дизайн */
+ 
+  box-sizing: border-box;
+  flex-shrink: 0; /* чтобы слайды не сжимались */
+}
+
+.slick-track {
+  display: flex !important;
+}
+
+.slick-slide {
+  
+}
+
+.carousel-slide-content .slick-slide {
+  min-height: 360px; /* чуть больше, чем карточка */
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.product-card-image {
+  width: 100%;
+  /* height: 220px; */
+  object-fit: cover;
+  display: block;
+}
+

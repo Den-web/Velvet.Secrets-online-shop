@@ -1,9 +1,9 @@
-import type { Product } from '../store/productsApi';
+import type { ProductType } from '../store/productsApi';
 import image1 from '../assets/imagesSection2/image1_4@2.jpg';
 import image2 from '../assets/imagesSection2/image2@2x.jpg';
 import image3 from '../assets/imagesSection2/image3.jpg';
 
-export const simpleProducts: Product[] = [
+export const simpleProducts: ProductType[] = [
   {
     id: '1',
     name: 'Бюстгальтер бежевий push-up',
