@@ -49,7 +49,6 @@ const ChooseYourPerfectFit: React.FC = () => {
         lg:w-[1920px] lg:flex lg:flex-row lg:items-center lg:gap-[20px] lg:p-0 lg:mx-auto
       "
     >
-      {/* Mobile / Tablet Title */}
       <div
         className="
           sm:text-center 
@@ -89,7 +88,6 @@ const ChooseYourPerfectFit: React.FC = () => {
         {renderResponsiveImage()}
 
         <div className="flex flex-col items-start box-border">
-          {/* Desktop Title */}
           <div className="hidden lg:block">
             <Title
               level={chooseYourPerfectFitLevel}
