@@ -58,3 +58,9 @@ body {
   background-color: #c31f5c !important;
   color: #ffffff !important;
 }
+
+
+:where(.css-dev-only-do-not-override-36gkoj).ant-card .ant-card-body {
+    padding: 20px;
+}
+

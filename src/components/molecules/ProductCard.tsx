@@ -12,7 +12,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => (
   <Card
     hoverable
     bordered={false}
-    className="product-card w-full mx-auto shadow-none border border-[#e5e5e5] p-0 rounded-md overflow-hidden"
+    className="product-card flex flex-col w-full h-full mx-auto shadow-none border border-[#e5e5e5] rounded-md overflow-hidden"
     cover={
       <Image
         src={product.image || '/fallback.jpg'}
@@ -21,7 +21,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => (
       />
     }
   >
-    <div className="product-card-content">
+    <div className="product-card-content flex flex-col flex-1 justify-between">
       <div className="product-card-title font-manrope font-bold text-[20px] leading-[1.5] text-grey6 mb-2.5 ">
         {product.name}
       </div>
