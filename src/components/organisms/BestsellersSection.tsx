@@ -6,7 +6,8 @@ import type { Product } from '../../store/productsApi';
 import { Title } from '../atoms/Title';
 import { Text } from '../atoms/Text';
 import { Image } from '../atoms/Image';
-import { ButtonConfig } from '../atoms/ButtonConfig';
+import Button from '../atoms/Button';
+import { ConfigProvider } from 'antd';
 
 const BESTSELLERS_IMAGE = {
   src: '/src/assets/imagesSection2/image-main@2x.jpg',
@@ -41,7 +42,6 @@ const BestsellersSection: React.FC = () => (
     className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] py-12 md:20 lg:py-24 bg-white overflow-visible"
   >
     <div className="flex flex-col lg:flex-row ">
-      {/* Image Section */}
       <div className="w-full hidden lg:block">
         <div className="relative w-full">
           <Image
@@ -52,8 +52,6 @@ const BestsellersSection: React.FC = () => (
           />
         </div>
       </div>
-
-      {/* Content Section */}
       <div className="w-full h-full flex items-center">
         <div className="w-full px-5 py-8 lg:py-10 lg:max-w-[600px]">
           <Title
@@ -67,18 +65,36 @@ const BestsellersSection: React.FC = () => (
           <Text className="font-manrope font-regular text-[18px] leading-[1.5] text-grey6 mb-7 block text-center md:text-left">
             {BESTSELLERS_CONTENT.description}
           </Text>
-
-          {/* Desktop/Tablet: Grid Layout */}
           <div className="hidden lg:block">
             <ProductGrid products={simpleProducts} />
           </div>
-
-          {/* Mobile: Carousel Layout */}
           <div className="lg:hidden">
             <ProductCarousel products={simpleProducts} />
           </div>
           <div className="flex justify-center lg:justify-start mt-6">
-            <ButtonConfig />
+            <ConfigProvider
+              theme={{
+                token: {
+                  colorPrimary: '#c31f5c',
+                  colorBorder: '#c31f5c',
+                  borderRadius: 8,
+                  colorText: '#grey6',
+                  fontSize: 20,
+                  fontFamily: 'manrope',
+                  controlHeight: 48,
+                  paddingContentHorizontal: 26,
+                  paddingContentVertical: 14,
+                  boxShadow: '0 2px 0 0 rgba(0, 0, 0, 0.02)',
+                },
+              }}
+            >
+              <Button
+                type="default"
+                className="self-start font-manrope font-semibold text-[16px] leading-[1] text-grey6 py-6 px-10 rounded-[8px] border-1 border-solid border-pink5 hover:border-pink5 bg-white hover:bg-pink5 hover:text-white transition delay-150 duration-300 ease-in-out"
+              >
+                Подивитись все
+              </Button>
+            </ConfigProvider>
           </div>
         </div>
       </div>
