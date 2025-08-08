@@ -11,7 +11,7 @@ export interface IconProps {
   color?: string;
 }
 
-const Icon: React.FC<IconProps> = ({
+export const Icon: React.FC<IconProps> = ({
   icon,
   className = '',
   style = {},
@@ -30,7 +30,9 @@ const Icon: React.FC<IconProps> = ({
   const commonStyle = { fontSize, color, ...style };
 
   if (isAntIcon(icon)) {
-    const AntIconComponent = icon as React.ComponentType<React.SVGProps<SVGSVGElement>>;
+    const AntIconComponent = icon as React.ComponentType<
+      React.SVGProps<SVGSVGElement>
+    >;
     return <AntIconComponent className={className} style={commonStyle} />;
   }
 
@@ -42,5 +44,3 @@ const Icon: React.FC<IconProps> = ({
     />
   );
 };
-
-export default Icon;

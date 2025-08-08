@@ -4,9 +4,7 @@ import { ProductCarousel } from '../molecules/ProductCarousel';
 import { simpleProducts } from '../../data/products';
 import type { Product } from '../../store/productsApi';
 import { ShowAllButton } from '../atoms/ShowAllButton';
-import { Title } from '../atoms/Title';
-import { Text } from '../atoms/Text';
-import { Image } from '../atoms/Image';
+import { Title, Text, Image } from '../atoms/index';
 
 const BESTSELLERS_IMAGE = {
   src: '/src/assets/imagesSection2/image-main@2x.jpg',

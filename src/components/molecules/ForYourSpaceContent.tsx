@@ -1,7 +1,5 @@
 import React from 'react';
-import { Title } from '../atoms/Title';
-import { Text } from '../atoms/Text';
-import Button from '../atoms/Button';
+import { Title, Text, Button } from '../atoms/index';
 import { forYourSpaceData } from '../../data/forYourSpaceData';
 import { useTitleLevels } from '../../helpers/useTitleLevels';
 

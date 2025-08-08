@@ -6,7 +6,11 @@ interface LinkProps {
   className?: string;
 }
 
-const Link: React.FC<LinkProps> = ({ href, children, className = '' }) => {
+export const Link: React.FC<LinkProps> = ({
+  href,
+  children,
+  className = '',
+}) => {
   return (
     <a
       href={href}
@@ -29,5 +33,3 @@ const Link: React.FC<LinkProps> = ({ href, children, className = '' }) => {
     </a>
   );
 };
-
-export default Link;

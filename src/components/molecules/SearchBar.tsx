@@ -1,6 +1,6 @@
 // // src/components/molecules/SearchBar.tsx
 import React from 'react';
-import SearchInput from '../atoms/SearchInput';
+import { SearchInput } from '../atoms/SearchInput';
 
 const SearchBar: React.FC = () => {
   return (
