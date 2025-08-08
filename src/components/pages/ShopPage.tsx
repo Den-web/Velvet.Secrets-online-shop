@@ -2,7 +2,7 @@ import React from 'react';
 import { useGetProductsQuery } from '../../store/productsApi';
 import { useDispatch } from 'react-redux';
 import { addItem } from '../../store/cartSlice';
-import { Button } from '../atoms/Button';
+import { Button } from '../atoms/index';
 
 const ShopPage: React.FC = () => {
   const { data: products, isLoading, error } = useGetProductsQuery();

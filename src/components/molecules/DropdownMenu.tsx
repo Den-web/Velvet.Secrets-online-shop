@@ -1,6 +1,6 @@
 import React from 'react';
 import { dropdownMenu } from '../../data/dropdownMenu';
-import { Link } from '../atoms/Link';
+import { Link } from '../atoms/index';
 
 const DropdownMenu: React.FC = () => {
   return (

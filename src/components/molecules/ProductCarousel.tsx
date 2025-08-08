@@ -1,5 +1,5 @@
 import React from 'react';
-import { Carousel } from '../atoms/Carousel';
+import { Carousel } from '../atoms/index';
 import type { Product } from '../../store/productsApi';
 import { ProductCard } from './ProductCard';
 import { simpleProducts } from '../../data/products';

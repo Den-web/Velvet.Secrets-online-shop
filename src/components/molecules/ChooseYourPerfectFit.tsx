@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Title, Text, Input, Button, Link, Image } from '../atoms';
+import { Title, Text, Input, Button, Link, Image } from '../atoms/index';
 import { useTitleLevels } from '../../helpers/useTitleLevels';
 import { chooseYourPerfectFitData } from '../../data/chooseYourPerfectFitData';
 import i18n from '../../i18n';

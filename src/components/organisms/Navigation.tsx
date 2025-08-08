@@ -7,7 +7,7 @@ import {
 } from '@ant-design/icons';
 import { Dropdown } from 'antd';
 
-import { Logo } from '../atoms/Logo';
+import { Logo } from '../atoms/index';
 import NavItem from '../molecules/NavItem';
 import DropdownMenu from '../molecules/DropdownMenu';
 import SearchBar from '../molecules/SearchBar';

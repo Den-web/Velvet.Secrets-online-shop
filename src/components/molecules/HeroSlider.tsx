@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button } from '../atoms/Button';
+import { Button } from '../atoms/index';
 
 interface HeroSlideProps {
   title: string;
