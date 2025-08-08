@@ -20,9 +20,11 @@
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@types/react-router-dom": "^5.3.3",
     "antd": "^5.26.1",
+    "i18next": "^25.3.2",
     "prettier": "^3.5.3",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "react-i18next": "^15.6.1",
     "react-redux": "^9.2.0",
     "react-router-dom": "^7.5.3"
   },

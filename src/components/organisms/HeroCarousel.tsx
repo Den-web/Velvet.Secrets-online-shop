@@ -5,7 +5,11 @@ import { heroSlides } from '../../data/heroSlides';
 
 const HeroCarousel: React.FC = () => {
   return (
-    <Carousel autoplay dots className="relative z-10">
+    <Carousel
+      autoplay
+      dots
+      className="relative z-10 mb-[50px] md:mb-[80px] lg:mb-[100px]"
+    >
       {heroSlides.map((slide, index) => (
         <HeroSlide
           key={index}

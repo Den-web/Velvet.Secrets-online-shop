@@ -1,24 +1,7 @@
-// import React from 'react';
-// import { Input } from 'antd';
-// import { SearchOutlined } from '@ant-design/icons';
-
-// const SearchInput: React.FC = () => {
-//   return (
-//     <Input
-//       placeholder="Пошук"
-//       allowClear
-//       prefix={<SearchOutlined style={{ color: '#c31f5c' }} />}
-//       className="w-[200px] rounded-full text-sm font-normal"
-//     />
-//   );
-// };
-
-// export default SearchInput;
-
 import React, { useState } from 'react';
 import { CloseOutlined, SearchOutlined } from '@ant-design/icons';
 
-const SearchInput: React.FC = () => {
+export const SearchInput: React.FC = () => {
   const [value, setValue] = useState('');
 
   return (
@@ -42,5 +25,3 @@ const SearchInput: React.FC = () => {
     </div>
   );
 };
-
-export default SearchInput;
