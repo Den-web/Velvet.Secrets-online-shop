@@ -41,7 +41,7 @@ const BestsellersSection: React.FC = () => (
             style={{ minHeight: '1000px', maxHeight: '974px' }}
             src={BESTSELLERS_IMAGE.src}
             alt={BESTSELLERS_IMAGE.alt}
-            className="ant-image w-full  object-cover rounded"
+            className="ant-image w-full object-cover rounded"
           />
         </div>
       </div>
