@@ -62,3 +62,7 @@ body {
   background-color: #c31f5c !important;
   color: #ffffff !important;
 }
+
+.ant-image {
+  display: block !important;
+}

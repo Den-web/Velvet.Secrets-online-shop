@@ -10,6 +10,11 @@ import mobile1 from './hero/mobile-img1.jpg';
 import mobile2 from './hero/mobile-img2.jpg';
 import mobile3 from './hero/mobile-img3.jpg';
 
+import mainImgSection2 from './imagesSection2/image-main.jpg';
+import productCard1 from './imagesSection2/image1_4.jpg';
+import productCard2 from './imagesSection2/image2.jpg';
+import productCard3 from './imagesSection2/image3.jpg';
+
 import dressWithLoveDesktop from './dressWithLove/dressWithLoveDesktop.jpg';
 import dressWithLoveDesktopCarousel1 from './dressWithLove/dressWithLoveDesktopCarusel1.jpg';
 import dressWithLoveDesktopCarousel2 from './dressWithLove/dressWithLoveDesktopCarusel2.jpg';
@@ -42,6 +47,10 @@ export {
   mobile1,
   mobile2,
   mobile3,
+  mainImgSection2,
+  productCard1,
+  productCard2,
+  productCard3,
   dressWithLoveDesktop,
   dressWithLoveDesktopCarousel1,
   dressWithLoveDesktopCarousel2,

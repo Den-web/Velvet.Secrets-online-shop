@@ -12,14 +12,13 @@ export const ProductCarousel: React.FC<ProductCarouselProps> = ({
   products = simpleProducts,
 }) => {
   return (
-    <div className="mt-6">
+    <div className="overflow-hidden mt-6">
       <Carousel
-        arrows
         slidesToShow={1}
         infinite
         dots
-        autoplay={false}
-        className="product-carousel"
+        autoplay
+        className="product-carousel absolute inset-y-0 left-0 "
       >
         {products.map((product) => (
           <div key={product.id} className="px-2">

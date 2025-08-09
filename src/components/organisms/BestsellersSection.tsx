@@ -3,26 +3,22 @@ import { ProductCard } from '../molecules/ProductCard';
 import { ProductCarousel } from '../molecules/ProductCarousel';
 import { simpleProducts } from '../../data/products';
 import type { Product } from '../../store/productsApi';
-import { ShowAllButton } from '../atoms/ShowAllButton';
-import { Title, Text, Image } from '../atoms/index';
-
-const BESTSELLERS_IMAGE = {
-  src: '/src/assets/imagesSection2/image-main@2x.jpg',
-  alt: 'Жіноча білизна — головне зображення секції бестселерів',
-} as const;
-
-const BESTSELLERS_CONTENT = {
-  title: 'Бестселлери',
-  description: 'Кожен вибирає ці бра - ти наступна',
-  emptyMessage: 'Немає бестселерів для показу.',
-} as const;
+import { Title } from '../atoms/Title';
+import { Text } from '../atoms/Text';
+import { Image } from '../atoms/Image';
+import { Button } from '../atoms/Button';
+import {
+  BESTSELLERS_BUTTON,
+  BESTSELLERS_CONTENT,
+  BESTSELLERS_IMAGE,
+} from '../../data/mainSectionBestsellers';
 
 interface ProductGridProps {
   products: Product[];
 }
 
 const ProductGrid: React.FC<ProductGridProps> = ({ products }) => (
-  <div className="bestsellers-list grid grid-cols-2 gap-5 mb-7">
+  <div className="bestsellers-list grid grid-cols-2 gap-5 mb-7 w-full">
     {products.length > 0 ? (
       products.map((product) => (
         <ProductCard product={product} key={product.id} />
@@ -36,46 +32,43 @@ const ProductGrid: React.FC<ProductGridProps> = ({ products }) => (
 const BestsellersSection: React.FC = () => (
   <section
     aria-labelledby="bestsellers-title"
-    className="w-full bg-white relative"
+    className="relative w-full left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] py-12 mb-[50px] md:mb-[80px] lg:mb-[100px] lg:py-24 bg-white overflow-visible"
   >
-    <div className="flex flex-col md:flex-row">
-      {/* Image Section */}
-      <div className="w-full md:w-1/2 relative">
-        <div className="w-full h-full">
+    <div className="flex flex-col lg:flex-row items-center ">
+      <div className="w-full hidden lg:block flex-shrink-0 lg:w-[50vw]">
+        <div className="relative w-full ">
           <Image
+            style={{ minHeight: '1000px', maxHeight: '974px' }}
             src={BESTSELLERS_IMAGE.src}
             alt={BESTSELLERS_IMAGE.alt}
-            className="w-full h-full object-cover"
+            className="ant-image w-full object-cover rounded"
           />
         </div>
       </div>
-
-      {/* Content Section */}
-      <div className="w-full md:w-1/2">
-        <div className="max-w-[600px] py-24 pl-8 pr-4">
+      <div className="relative flex flex-col lg:flex-row w-full ">
+        <div className="w-full px-5 py-8 lg:py-10 lg:w-[600px]">
           <Title
             id="bestsellers-title"
             level={2}
-            className="font-manrope font-bold text-[36px] leading-[1.2] text-grey6 mb-2.5"
+            className="font-manrope font-bold lg:font-semibold text-[36px] leading-[1.2] text-grey6 mb-2.5 text-center md:text-left"
           >
             {BESTSELLERS_CONTENT.title}
           </Title>
 
-          <Text className="font-manrope font-regular text-[18px] leading-[1.5] text-grey6 mb-7 block">
+          <Text className="font-manrope font-regular text-[18px] leading-[1.5] text-grey6 mb-7 block text-center md:text-left">
             {BESTSELLERS_CONTENT.description}
           </Text>
-
-          {/* Desktop/Tablet: Grid Layout */}
-          <div className="hidden md:block">
+          <div className="hidden lg:block">
             <ProductGrid products={simpleProducts} />
           </div>
-
-          {/* Mobile: Carousel Layout */}
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <ProductCarousel products={simpleProducts} />
           </div>
-
-          <ShowAllButton className="self-start font-manrope font-bold text-[20px] leading-[1] text-grey6 py-6 px-10 rounded border-2 border-solid border-pink5 hover:border-pink5 bg-white hover:bg-pink5 hover:text-white transition delay-150 duration-300 ease-in-out" />
+          <div className="flex justify-center lg:justify-start mt-6">
+            <Button className="custom-btn-forYourSpace self-start font-manrope text-[20px] leading-[1] py-6 px-10">
+              {BESTSELLERS_BUTTON.text}
+            </Button>
+          </div>
         </div>
       </div>
     </div>
