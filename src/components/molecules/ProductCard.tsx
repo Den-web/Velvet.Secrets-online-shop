@@ -15,9 +15,9 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => (
     className="product-card flex flex-col w-full h-full mx-auto shadow-none border border-[#e5e5e5] rounded-md overflow-hidden"
     cover={
       <Image
-        src={product.image || '/fallback.jpg'}
+        src={product.image || ''}
         alt={product.name || ''}
-        className="product-card-image rounded w-full h-auto object-cover"
+        className="product-card-image rounded h-auto object-cover"
       />
     }
   >

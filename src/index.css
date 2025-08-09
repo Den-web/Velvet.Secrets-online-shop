@@ -59,5 +59,6 @@ body {
   color: #ffffff !important;
 }
 
-
-
+.ant-image {
+  display: block !important;
+}

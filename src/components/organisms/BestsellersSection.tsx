@@ -7,18 +7,11 @@ import { Title } from '../atoms/Title';
 import { Text } from '../atoms/Text';
 import { Image } from '../atoms/Image';
 import Button from '../atoms/Button';
-import { ConfigProvider } from 'antd';
-
-const BESTSELLERS_IMAGE = {
-  src: '/src/assets/imagesSection2/image-main@2x.jpg',
-  alt: 'Жіноча білизна — головне зображення секції бестселерів',
-} as const;
-
-const BESTSELLERS_CONTENT = {
-  title: 'Бестселлери',
-  description: 'Кожен вибирає ці бра - ти наступна',
-  emptyMessage: 'Немає бестселерів для показу.',
-} as const;
+import {
+  BESTSELLERS_BUTTON,
+  BESTSELLERS_CONTENT,
+  BESTSELLERS_IMAGE,
+} from '../../data/mainSectionBestsellers';
 
 interface ProductGridProps {
   products: Product[];
@@ -39,21 +32,21 @@ const ProductGrid: React.FC<ProductGridProps> = ({ products }) => (
 const BestsellersSection: React.FC = () => (
   <section
     aria-labelledby="bestsellers-title"
-    className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] py-12 md:20 lg:py-24 bg-white overflow-visible"
+    className="relative w-full left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] py-12 mb-[50px] md:mb-[80px] lg:mb-[100px] lg:py-24 bg-white overflow-visible"
   >
-    <div className="flex flex-col lg:flex-row ">
-      <div className="w-full hidden lg:block">
-        <div className="relative w-full">
+    <div className="flex flex-col lg:flex-row items-center ">
+      <div className="w-full hidden lg:block flex-shrink-0 lg:w-[50vw]">
+        <div className="relative w-full ">
           <Image
-            height={974}
+            style={{ minHeight: '1000px', maxHeight: '974px' }}
             src={BESTSELLERS_IMAGE.src}
             alt={BESTSELLERS_IMAGE.alt}
-            className="w-full h-full object-cover rounded"
+            className="ant-image w-full  object-cover rounded"
           />
         </div>
       </div>
-      <div className="w-full h-full flex items-center">
-        <div className="w-full px-5 py-8 lg:py-10 lg:max-w-[600px]">
+      <div className="relative flex flex-col lg:flex-row w-full ">
+        <div className="w-full px-5 py-8 lg:py-10 lg:w-[600px]">
           <Title
             id="bestsellers-title"
             level={2}
@@ -72,29 +65,9 @@ const BestsellersSection: React.FC = () => (
             <ProductCarousel products={simpleProducts} />
           </div>
           <div className="flex justify-center lg:justify-start mt-6">
-            <ConfigProvider
-              theme={{
-                token: {
-                  colorPrimary: '#c31f5c',
-                  colorBorder: '#c31f5c',
-                  borderRadius: 8,
-                  colorText: '#grey6',
-                  fontSize: 20,
-                  fontFamily: 'manrope',
-                  controlHeight: 48,
-                  paddingContentHorizontal: 26,
-                  paddingContentVertical: 14,
-                  boxShadow: '0 2px 0 0 rgba(0, 0, 0, 0.02)',
-                },
-              }}
-            >
-              <Button
-                type="default"
-                className="self-start font-manrope font-semibold text-[16px] leading-[1] text-grey6 py-6 px-10 rounded-[8px] border-1 border-solid border-pink5 hover:border-pink5 bg-white hover:bg-pink5 hover:text-white transition delay-150 duration-300 ease-in-out"
-              >
-                Подивитись все
-              </Button>
-            </ConfigProvider>
+            <Button className="custom-btn-forYourSpace self-start font-manrope text-[20px] leading-[1] py-6 px-10">
+              {BESTSELLERS_BUTTON.text}
+            </Button>
           </div>
         </div>
       </div>
