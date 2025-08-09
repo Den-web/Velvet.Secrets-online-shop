@@ -7,10 +7,16 @@ type ButtonProps = AntButtonProps & {
   className?: string;
 };
 
-const Button: React.FC<ButtonProps> = ({ children, className = '', ...props }) => (
-  <AntButton {...props} className={`${className}`} htmlType={props.htmlType || 'button'}>
+export const Button: React.FC<ButtonProps> = ({
+  children,
+  className = '',
+  ...props
+}) => (
+  <AntButton
+    {...props}
+    className={`${className}`}
+    htmlType={props.htmlType || 'button'}
+  >
     {children}
   </AntButton>
 );
-
-export default Button;

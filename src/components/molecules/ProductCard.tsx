@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card } from 'antd';
-import { Image } from '../atoms/Image';
+import { Image } from '../atoms/index';
 import type { Product } from '../../store/productsApi';
 
 interface ProductCardProps {

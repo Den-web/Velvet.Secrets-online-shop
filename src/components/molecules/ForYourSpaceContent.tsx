@@ -1,9 +1,7 @@
 import React from 'react';
-import { Title } from '../atoms/Title';
-import { Text } from '../atoms/Text';
-import Button from '../atoms/Button';
+import { Title, Text, Button } from '../atoms/index';
 import { forYourSpaceData } from '../../data/forYourSpaceData';
-import { useTitleLevels } from '../../helpers/responsiveUtils';
+import { useTitleLevels } from '../../helpers/useTitleLevels';
 
 const ForYourSpaceContent: React.FC = () => {
   const { title, subtitle, buttonText, images, discounts, discountValue } =
@@ -31,14 +29,11 @@ const ForYourSpaceContent: React.FC = () => {
       </picture>
 
       <div
-        className={`
-          absolute flex items-center justify-center
-          ${
-            screens.lg || screens.md
-              ? 'top-[-47px] left-[103px] w-[170px] h-[160px]'
-              : 'top-[-30px] left-[46px] w-[114.75px] h-[108px]'
-          }
-        `}
+        className={`absolute flex items-center justify-center ${
+          screens.lg || screens.md
+            ? 'top-[-47px] left-[103px] w-[170px] h-[160px]'
+            : 'top-[-30px] left-[46px] w-[114.75px] h-[108px]'
+        }`}
       >
         <img
           src={discountImage}

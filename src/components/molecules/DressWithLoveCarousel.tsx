@@ -1,9 +1,8 @@
 import React from 'react';
 import { Grid } from 'antd';
 import BaseCarousel from './BaseCarousel';
-import { Title } from '../atoms/Title';
-import { Text } from '../atoms/Text';
-import Button from '../atoms/Button';
+import { Title, Text, Button } from '../atoms/index';
+
 import { dressWithLoveData } from '../../data/dressWithLoveData';
 
 const { useBreakpoint } = Grid;

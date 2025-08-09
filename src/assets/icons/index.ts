@@ -33,6 +33,10 @@ import forYourSpaceMobile from './forYourSpace/forYourSpaceMobile.jpg';
 import forYourSpaceDiscounDesktopTablet from './forYourSpace/forYourSpaceDiscounDesktopTablet.png';
 import forYourSpaceDiscountMobile from './forYourSpace/forYourSpaceDiscountMobile.png';
 
+import chooseYourPerfectFitDesctop from './chooseYourPerfectFit/chooseYourPerfectFitDesctop.jpg';
+import chooseYourPerfectFitTablet from './chooseYourPerfectFit/chooseYourPerfectFitTablet.jpg';
+import chooseYourPerfectFitMobile from './chooseYourPerfectFit/chooseYourPerfectFitMobile.jpg';
+
 export {
   desktop1,
   desktop2,
@@ -61,4 +65,7 @@ export {
   forYourSpaceMobile,
   forYourSpaceDiscounDesktopTablet,
   forYourSpaceDiscountMobile,
+  chooseYourPerfectFitDesctop,
+  chooseYourPerfectFitTablet,
+  chooseYourPerfectFitMobile,
 };

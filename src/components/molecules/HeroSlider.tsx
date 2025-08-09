@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from '../atoms/Button';
+import { Button } from '../atoms/index';
 
 interface HeroSlideProps {
   title: string;
@@ -29,7 +29,9 @@ const HeroSlide: React.FC<HeroSlideProps> = ({
       <div className="relative z-10 text-white font-manrope w-full flex justify-center md:justify-start md:pl-[30px] lg:pl-[352px]">
         <div className="flex flex-col gap-5 items-center text-center md:items-start md:text-left max-w-xs md:max-w-sm lg:max-w-xl">
           <div className="flex flex-col gap-2.5 md:gap-5 items-center md:items-start">
-            <h1 className="font-extrabold text-2xl md:text-2xl lg:text-5xl">{title}</h1>
+            <h1 className="font-extrabold text-2xl md:text-2xl lg:text-5xl">
+              {title}
+            </h1>
             <p className="font-medium text-sm md:text-base md:leading-6 lg:text-2xl lg:leading-9">
               {subtitle}
             </p>

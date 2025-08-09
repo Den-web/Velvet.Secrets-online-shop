@@ -1,11 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Icon from '../atoms/Icon';
+import { Icon } from '../atoms/index';
 
 type NavItemProps = {
   to: string;
   label?: string;
-  icon?: React.FunctionComponent<React.SVGProps<SVGSVGElement>> | React.ComponentType;
+  icon?:
+    | React.FunctionComponent<React.SVGProps<SVGSVGElement>>
+    | React.ComponentType;
   onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void;
 };
 

@@ -6,7 +6,7 @@ import type { Product } from '../../store/productsApi';
 import { Title } from '../atoms/Title';
 import { Text } from '../atoms/Text';
 import { Image } from '../atoms/Image';
-import Button from '../atoms/Button';
+import { Button } from '../atoms/Button';
 import {
   BESTSELLERS_BUTTON,
   BESTSELLERS_CONTENT,

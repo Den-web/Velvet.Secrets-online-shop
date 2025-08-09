@@ -7,7 +7,7 @@ interface CarouselProps extends Omit<AntdCarouselProps, 'children'> {
   className?: string;
 }
 
-const Carousel: React.FC<CarouselProps> = ({
+export const Carousel: React.FC<CarouselProps> = ({
   children,
   className = '',
   arrows = false,
@@ -29,5 +29,3 @@ const Carousel: React.FC<CarouselProps> = ({
     </AntdCarousel>
   );
 };
-
-export default Carousel;

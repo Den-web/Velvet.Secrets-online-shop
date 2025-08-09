@@ -9,7 +9,7 @@ interface CardProps extends Omit<AntCardProps, 'children'> {
   bordered?: boolean;
 }
 
-const Card: React.FC<CardProps> = ({
+export const Card: React.FC<CardProps> = ({
   children,
   className = '',
   hoverable = false,
@@ -27,5 +27,3 @@ const Card: React.FC<CardProps> = ({
     </AntCard>
   );
 };
-
-export default Card;
