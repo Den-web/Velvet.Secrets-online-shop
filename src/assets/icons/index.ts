@@ -32,6 +32,8 @@ import chooseYourPerfectFitDesctop from './chooseYourPerfectFit/chooseYourPerfec
 import chooseYourPerfectFitTablet from './chooseYourPerfectFit/chooseYourPerfectFitTablet.jpg';
 import chooseYourPerfectFitMobile from './chooseYourPerfectFit/chooseYourPerfectFitMobile.jpg';
 
+import howMeasureParameters from './howMeasureParameters/howMeasureParametersDesktop.jpg';
+
 export {
   desktop1,
   desktop2,
@@ -59,4 +61,5 @@ export {
   chooseYourPerfectFitDesctop,
   chooseYourPerfectFitTablet,
   chooseYourPerfectFitMobile,
+  howMeasureParameters,
 };
