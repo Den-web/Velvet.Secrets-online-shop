@@ -32,6 +32,11 @@ import chooseYourPerfectFitDesctop from './chooseYourPerfectFit/chooseYourPerfec
 import chooseYourPerfectFitTablet from './chooseYourPerfectFit/chooseYourPerfectFitTablet.jpg';
 import chooseYourPerfectFitMobile from './chooseYourPerfectFit/chooseYourPerfectFitMobile.jpg';
 
+import galiaKiev from './feedbacks/galiaKiev.jpg';
+import olenaKiev from './feedbacks/olenaKiev.jpg';
+import olena2Kiev from './feedbacks/olena2Kiev.jpg';
+import valentinaKiev from './feedbacks/valentinaKiev.jpg';
+
 export {
   desktop1,
   desktop2,
@@ -59,4 +64,8 @@ export {
   chooseYourPerfectFitDesctop,
   chooseYourPerfectFitTablet,
   chooseYourPerfectFitMobile,
+  galiaKiev,
+  olenaKiev,
+  olena2Kiev,
+  valentinaKiev,
 };

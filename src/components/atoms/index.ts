@@ -12,3 +12,4 @@ export { SearchInput } from './SearchInput';
 export { Icon } from './Icon';
 export { Carousel } from './Carousel';
 export { Card } from './Card';
+export { Rate } from './Rate';

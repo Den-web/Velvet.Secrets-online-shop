@@ -22,5 +22,6 @@ export const useTitleLevels = () => {
     forYourSpaceTitleLevel: getTitleLevel({ lg: 1, md: 2, sm: 4 }),
     chooseYourPerfectFitLevel: getTitleLevel({ lg: 1, md: 2, sm: 4 }),
     discountImageTitleLevel: getTitleLevel({ lg: 1, md: 1, sm: 3 }),
+    feedbacksTitleLevel: getTitleLevel({ lg: 1, md: 2, sm: 4 }),
   };
 };
