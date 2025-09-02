@@ -5,6 +5,7 @@ import BestsellersSection from '../organisms/BestsellersSection';
 import DressWithLove from '../organisms/DressWithLove';
 import ForYourSpaceSection from '../organisms/ForYourSpaceSection';
 import ChooseYourPerfectFitSection from '../organisms/ChooseYourPerfectFitSection';
+import HowMeasureParametersSection from '../organisms/HowMeasureParametersSection';
 import FeedbacksSection from '../organisms/FeedbacksSection';
 
 const MainTemplate: React.FC = () => (
@@ -15,6 +16,7 @@ const MainTemplate: React.FC = () => (
     <DressWithLove />
     <ForYourSpaceSection />
     <ChooseYourPerfectFitSection />
+    <HowMeasureParametersSection />
     <FeedbacksSection />
   </div>
 );

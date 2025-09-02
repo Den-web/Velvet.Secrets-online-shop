@@ -37,6 +37,8 @@ import olenaKiev from './feedbacks/olenaKiev.jpg';
 import olena2Kiev from './feedbacks/olena2Kiev.jpg';
 import valentinaKiev from './feedbacks/valentinaKiev.jpg';
 
+import howMeasureParameters from './howMeasureParameters/howMeasureParametersDesktop.jpg';
+
 export {
   desktop1,
   desktop2,
@@ -68,4 +70,5 @@ export {
   olenaKiev,
   olena2Kiev,
   valentinaKiev,
+  howMeasureParameters,
 };
