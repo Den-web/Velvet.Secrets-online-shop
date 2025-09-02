@@ -42,7 +42,7 @@ body {
 .custom-btn-dressWithLove,
 .custom-btn-forYourSpace,
 .custom-btn-ChooseYourPerfectFit,
-.custom-btn-ChooseYourPerfectFitTwo, 
+.custom-btn-ChooseYourPerfectFitTwo,
 .custom-btn-feedbacks {
   font-weight: 700;
   border: 1px solid #c31f5c !important;
@@ -63,4 +63,12 @@ body {
 .custom-btn-feedbacks:hover {
   background-color: #c31f5c !important;
   color: #ffffff !important;
+}
+
+.custom-dots-carousel li  {
+  background-color: #cccccc !important;
+}
+
+.custom-dots-carousel li.slick-active::after {
+  background-color: #c31f5c !important;
 }
