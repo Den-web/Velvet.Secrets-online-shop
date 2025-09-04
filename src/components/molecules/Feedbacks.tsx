@@ -1,4 +1,3 @@
-// src/components/molecules/Feedbacks.tsx
 import React from 'react';
 import { Carousel, Grid } from 'antd';
 import { feedbacksData } from '../../data/feedbacksData';
@@ -12,6 +11,8 @@ export const Feedbacks: React.FC = () => {
   const slidesToShow = screens.lg ? 4 : screens.md ? 2 : 1;
   const showDots = !screens.lg;
   const { feedbacksTitleLevel } = useTitleLevels();
+
+  const dotsConfig = showDots ? { className: 'custom-dots-carousel' } : false;
 
   const feedbackSlides = feedbacksData.list.map((item) => (
     <div key={item.id}>
@@ -50,7 +51,7 @@ export const Feedbacks: React.FC = () => {
 
       <Carousel
         autoplay={true}
-        dots={showDots ? { className: 'custom-dots-carousel' } : false}
+        dots={dotsConfig}
         slidesToShow={slidesToShow}
         className="text-center my-10"
       >
