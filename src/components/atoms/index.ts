@@ -15,3 +15,4 @@ export { Rate } from './Rate';
 export { List } from './List';
 export { ListItem } from './ListItem';
 export { Badge } from './Badge';
+export { Form } from './Form';

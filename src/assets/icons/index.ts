@@ -1,3 +1,8 @@
+import headerLheaderLogoDarkDesktop from './headerLogo/headerLogoDarkDesktop.svg';
+import headerLogoDartTabletMob from './headerLogo/headerLogoDartTabletMob.svg';
+import headerLogoLightDesktop from './headerLogo/headerLogoLightDesktop.svg';
+import headerLogoLightTabletMob from './headerLogo/headerLogoLightTabletMob.svg';
+
 import desktop1 from './hero/desktop-img1.jpg';
 import desktop2 from './hero/desktop-img2.jpg';
 import desktop3 from './hero/desktop-img3.jpg';
@@ -39,7 +44,17 @@ import valentinaKiev from './feedbacks/valentinaKiev.jpg';
 
 import howMeasureParameters from './howMeasureParameters/howMeasureParametersDesktop.jpg';
 
+import footerBgDesktop from './footer/footerBgDesktop.jpg';
+import footerBgMobile from './footer/footerBgMobile.jpg';
+import footerBgTablet from './footer/footerBgTablet.jpg';
+import footerLogoDesktopAndMob from './footer/footerLogoDesktopAndMob.svg';
+import footerLogoTablet from './footer/footerLogoTablet.svg';
+
 export {
+  headerLheaderLogoDarkDesktop,
+  headerLogoDartTabletMob,
+  headerLogoLightDesktop,
+  headerLogoLightTabletMob,
   desktop1,
   desktop2,
   desktop3,
@@ -71,4 +86,9 @@ export {
   olena2Kiev,
   valentinaKiev,
   howMeasureParameters,
+  footerBgDesktop,
+  footerBgMobile,
+  footerBgTablet,
+  footerLogoDesktopAndMob,
+  footerLogoTablet,
 };
