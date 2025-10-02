@@ -45,6 +45,36 @@ type FooterData = {
 const findNavLink = (label: string) =>
   navLinksData.find((link) => link.label === label);
 
+const homeSectionItems: FooterSectionItem[] = navLinksData
+  .filter((link) =>
+    ['Про нас', 'Новинки', 'Білизна', 'Домашній одяг', 'Акції'].includes(
+      link.label,
+    ),
+  )
+  .map((link) => ({ label: link.label, to: link.to }));
+
+const clientsSection: FooterSection = {
+  title: 'Клієнтам',
+  items: [
+    { label: 'Доставка та оплата', to: '/delivery' },
+    { label: 'Обмін та повернення', to: '/returns' },
+    { label: 'Підбір розміру', to: '/size-guide' },
+    ...(findNavLink('Блог')
+      ? [{ label: 'Блог', to: findNavLink('Блог')!.to }]
+      : []),
+  ],
+};
+
+const socialsSection: FooterSection = {
+  title: 'Слідкуй за нами',
+  items: [
+    { label: 'Google', iconKey: 'google', to: '#' },
+    { label: 'Instagram', iconKey: 'instagram', to: '#' },
+    { label: 'Facebook', iconKey: 'facebook', to: '#' },
+    { label: 'YouTube', iconKey: 'youtube', to: '#' },
+  ],
+};
+
 export const footerData: FooterData = {
   logo: {
     desktopAndMobile: footerLogoDesktopAndMob,
@@ -66,42 +96,10 @@ export const footerData: FooterData = {
   },
 
   sections: [
-    {
-      title: 'Головна',
-      items: navLinksData
-        .filter((link) =>
-          ['Про нас', 'Новинки', 'Білизна', 'Домашній одяг', 'Акції'].includes(
-            link.label,
-          ),
-        )
-        .map((link) => ({ label: link.label, to: link.to })),
-    },
-    {
-      title: 'Клієнтам',
-      items: [
-        { label: 'Доставка та оплата', to: '/delivery' },
-        { label: 'Обмін та повернення', to: '/returns' },
-        { label: 'Підбір розміру', to: '/size-guide' },
-        ...(findNavLink('Блог')
-          ? [{ label: 'Блог', to: findNavLink('Блог')!.to }]
-          : []),
-      ],
-    },
-    {
-      title: 'Слідкуй за нами',
-      items: [
-        { label: 'Google', iconKey: 'google', to: '#' },
-        { label: 'Instagram', iconKey: 'instagram', to: '#' },
-        { label: 'Facebook', iconKey: 'facebook', to: '#' },
-        { label: 'YouTube', iconKey: 'youtube', to: '#' },
-      ],
-    },
+    { title: 'Головна', items: homeSectionItems },
+    clientsSection,
+    socialsSection,
   ],
 
-  socials: [
-    { label: 'Google', iconKey: 'google', to: '#' },
-    { label: 'Instagram', iconKey: 'instagram', to: '#' },
-    { label: 'Facebook', iconKey: 'facebook', to: '#' },
-    { label: 'YouTube', iconKey: 'youtube', to: '#' },
-  ],
+  socials: socialsSection.items,
 };

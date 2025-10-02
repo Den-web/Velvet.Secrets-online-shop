@@ -86,6 +86,10 @@ export const FooterColumns: React.FC = () => {
     </div>
   );
 
+  const renderNormalSections = normalSections.map((section) =>
+    renderSection(section),
+  );
+
   return (
     <div
       className="
@@ -95,7 +99,7 @@ export const FooterColumns: React.FC = () => {
         lg:text-[18px] lg:flex lg:flex-row lg:flex-nowrap lg:justify-between lg:items-start
       "
     >
-      {normalSections.map((section) => renderSection(section))}
+      {renderNormalSections}
       {socialSection && renderSocialSection(socialSection)}
     </div>
   );
