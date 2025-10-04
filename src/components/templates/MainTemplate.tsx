@@ -7,6 +7,7 @@ import ForYourSpaceSection from '../organisms/ForYourSpaceSection';
 import ChooseYourPerfectFitSection from '../organisms/ChooseYourPerfectFitSection';
 import HowMeasureParametersSection from '../organisms/HowMeasureParametersSection';
 import FeedbacksSection from '../organisms/FeedbacksSection';
+import FooterSection from '../organisms/FooterSection';
 
 const MainTemplate: React.FC = () => (
   <div className="min-h-screen w-full flex flex-col bg-white">
@@ -18,6 +19,7 @@ const MainTemplate: React.FC = () => (
     <ChooseYourPerfectFitSection />
     <HowMeasureParametersSection />
     <FeedbacksSection />
+    <FooterSection />
   </div>
 );
 

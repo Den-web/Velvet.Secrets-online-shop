@@ -25,5 +25,7 @@ export const useTitleLevels = () => {
     howMeasureParametersLevel: getTitleLevel({ lg: 1, md: 2, sm: 4 }),
     howMeasureParametersLevel2: getTitleLevel({ lg: 3, md: 4, sm: 5 }),
     feedbacksTitleLevel: getTitleLevel({ lg: 1, md: 2, sm: 4 }),
+    footerTitleFormLevel: getTitleLevel({ lg: 2, md: 2, sm: 4 }),
+    footerTitleColumnsLevel: getTitleLevel({ lg: 4, md: 5, sm: 5 }),
   };
 };
