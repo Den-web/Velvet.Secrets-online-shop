@@ -20,6 +20,7 @@ export const useTitleLevels = () => {
   return {
     screens,
     forYourSpaceTitleLevel: getTitleLevel({ lg: 1, md: 2, sm: 4 }),
+    bestsellerTitleLevel: getTitleLevel({ lg: 1, md: 2, sm: 4 }),
     discountImageTitleLevel: getTitleLevel({ lg: 1, md: 1, sm: 3 }),
     chooseYourPerfectFitLevel: getTitleLevel({ lg: 1, md: 2, sm: 4 }),
     howMeasureParametersLevel: getTitleLevel({ lg: 1, md: 2, sm: 4 }),

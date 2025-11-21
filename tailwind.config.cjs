@@ -1,4 +1,3 @@
-// tailwind.config.cjs
 module.exports = {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
@@ -15,8 +14,8 @@ module.exports = {
       },
       fontFamily: {
         manrope: ['Manrope', 'sans-serif'],
-        releway: ['Releway', 'sans-serif'],
-        moserat: ['Monserat', 'sans-serif'],
+        raleway: ['Raleway', 'sans-serif'],
+        montserrat: ['Montserrat', 'sans-serif'],
       },
       fontWeight: {
         regular: '400',
