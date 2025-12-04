@@ -2,7 +2,6 @@ import React from 'react';
 import Navigation from '../organisms/Navigation';
 import HeroCarousel from '../organisms/HeroCarousel';
 import BestsellerSection from '../organisms/BestsellerSection';
-// import BestsellersSection from '../organisms/BestsellersSection';
 import DressWithLove from '../organisms/DressWithLove';
 import ForYourSpaceSection from '../organisms/ForYourSpaceSection';
 import ChooseYourPerfectFitSection from '../organisms/ChooseYourPerfectFitSection';
@@ -15,7 +14,6 @@ const MainTemplate: React.FC = () => (
     <Navigation />
     <HeroCarousel />
     <BestsellerSection />
-    {/* <BestsellersSection />; */}
     <DressWithLove />
     <ForYourSpaceSection />
     <ChooseYourPerfectFitSection />

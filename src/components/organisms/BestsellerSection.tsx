@@ -12,9 +12,17 @@ const BestsellerSection: React.FC = () => {
 
   const { title, subtitle, buttonText, mainImage, items } = bestsellerData;
 
-  const desktopGridItems = items.map((item) => (
-    <BestsellerCard key={item.id} item={item} />
-  ));
+  const productsContent = !isDesktop ? (
+    <div>
+      <BestsellerCarousel items={items} />
+    </div>
+  ) : (
+    <div className="grid grid-cols-2 gap-[20px] justify-items-start">
+      {items.map((item) => (
+        <BestsellerCard key={item.id} item={item} />
+      ))}
+    </div>
+  );
 
   return (
     <section className="w-full bg-white mb-[50px] md:mb-[80px] lg:mb-[100px]">
@@ -29,7 +37,15 @@ const BestsellerSection: React.FC = () => {
         "
       >
         {isDesktop && (
-          <div className="hidden lg:block w-[952px] h-[1021px] flex-shrink-0">
+          <div
+            className="
+                hidden lg:block 
+                lg:w-[952px] 
+                lg:shrink
+                lg:h-auto 
+                min-w-0
+             "
+          >
             <Image
               src={mainImage}
               alt="bestseller main"
@@ -41,9 +57,8 @@ const BestsellerSection: React.FC = () => {
         <div
           className="
             w-full 
-            lg:w-[598px] lg:h-[1021px]
-            lg:flex-shrink-0 
-            lg:py-[40px] 
+            lg:w-[592px] lg:shrink-0
+            lg:h-auto lg:py-[40px] 
             flex flex-col gap-5
           "
         >
@@ -57,22 +72,15 @@ const BestsellerSection: React.FC = () => {
               {title}
             </Title>
             <Text
-              className="text-grey6 font-manrope font-regular 
-                      text-[14px] md:text-[16px] lg:text-[18px]"
+              className="
+              text-grey6 font-manrope font-regular 
+                text-sm md:text-base lg:text-lg"
             >
               {subtitle}
             </Text>
           </div>
 
-          {!isDesktop ? (
-            <div>
-              <BestsellerCarousel items={items} />
-            </div>
-          ) : (
-            <div className="grid grid-cols-2 gap-[20px]">
-              {desktopGridItems}
-            </div>
-          )}
+          {productsContent}
 
           <div className="lg:mt-[0px]">
             <Button
@@ -81,9 +89,9 @@ const BestsellerSection: React.FC = () => {
                 mx-auto lg:mx-0
                 bg-white text-grey6 font-manrope font-bold
                 px-[26px] py-[14px]
-                text-[16px] w-[164px] h-[42px]
-                md:text-[16px] md:w-[180px] md:h-[44px]
-                lg:text-[20px] lg:w-[212px] lg:h-[48px]
+                text-base w-[164px] h-[42px]
+                md:text-bas md:w-[180px] md:h-[44px]
+                lg:text-xl lg:w-[212px] lg:h-[48px]
                 whitespace-nowrap
               "
             >

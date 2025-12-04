@@ -15,7 +15,7 @@ export const BestsellerCarousel: React.FC<BestsellerCarouselProps> = ({
 
   const carouselSlides = items.map((item) => (
     <div key={item.id} className="h-full">
-      <div className="pl-[4px] pr-[10px] pb-4 h-full">
+      <div className="w-[301px] pl-[5px] pr-[10px] pb-6 h-full">
         <BestsellerCard item={item} />
       </div>
     </div>

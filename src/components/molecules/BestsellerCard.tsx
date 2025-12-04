@@ -2,6 +2,7 @@ import React from 'react';
 import { Image, Text } from '../atoms';
 import type { BestsellerItem } from '../../data/bestsellerData';
 import { useTWBreakpoints } from '../../helpers/useTWBreakpoints';
+import { getResponsiveImageSrc } from '../../helpers/mediaHelpers';
 
 interface BestsellerCardProps {
   item: BestsellerItem;
@@ -10,7 +11,11 @@ interface BestsellerCardProps {
 export const BestsellerCard: React.FC<BestsellerCardProps> = ({ item }) => {
   const { isDesktop } = useTWBreakpoints();
 
-  const imageSrc = isDesktop ? item.imageDesktop : item.imageTabletMobile;
+  const imageSrc = getResponsiveImageSrc(
+    isDesktop,
+    item.imageDesktop,
+    item.imageTabletMobile,
+  );
 
   return (
     <div
@@ -19,7 +24,7 @@ export const BestsellerCard: React.FC<BestsellerCardProps> = ({ item }) => {
         bg-white rounded-[4px] 
         shadow-[1px_2px_10px_0_rgba(0,0,0,0.25)]
         sm:mb-2.5 lg:mb-0
-        w-[286px] lg:w-[289px]
+        w-full max-w-[286px]
       "
     >
       <div className="h-[229px] w-full relative flex-shrink-0">
@@ -35,9 +40,8 @@ export const BestsellerCard: React.FC<BestsellerCardProps> = ({ item }) => {
           <Text
             className="
               font-manrope font-bold text-grey6
-              text-[16px] md:text-[20px]
+              text-base md:text-xl
               leading-[1.4]
-              /* min-h гарантує місце під 2 рядки */
               min-h-[46px] md:min-h-[56px]
               line-clamp-2
             "
@@ -50,7 +54,7 @@ export const BestsellerCard: React.FC<BestsellerCardProps> = ({ item }) => {
           <Text
             className="
               font-manrope font-normal text-grey6
-              text-[14px] md:text-[16px] lg:text-[18px]
+              text-sm md:text-base lg:text-lg
             "
           >
             {item.price}

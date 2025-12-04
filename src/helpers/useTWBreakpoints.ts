@@ -1,35 +1,43 @@
-import { useEffect, useState } from 'react';
+import { useState, useEffect } from 'react';
+
+const QUERIES = {
+  mobile: '(max-width: 767px)',
+  tablet: '(min-width: 768px) and (max-width: 1023px)',
+  desktop: '(min-width: 1024px)',
+};
 
 export const useTWBreakpoints = () => {
-  const [width, setWidth] = useState<number | null>(null);
+  const [breakpoints, setBreakpoints] = useState({
+    isMobile: false,
+    isTablet: false,
+    isDesktop: true,
+  });
 
   useEffect(() => {
-    const handleResize = () => {
-      setWidth(window.innerWidth);
+    const mobileQuery = window.matchMedia(QUERIES.mobile);
+    const tabletQuery = window.matchMedia(QUERIES.tablet);
+    const desktopQuery = window.matchMedia(QUERIES.desktop);
+
+    const updateMatches = () => {
+      setBreakpoints({
+        isMobile: mobileQuery.matches,
+        isTablet: tabletQuery.matches,
+        isDesktop: desktopQuery.matches,
+      });
     };
 
-    handleResize();
+    updateMatches();
 
-    window.addEventListener('resize', handleResize);
+    mobileQuery.addEventListener('change', updateMatches);
+    tabletQuery.addEventListener('change', updateMatches);
+    desktopQuery.addEventListener('change', updateMatches);
 
-    return () => window.removeEventListener('resize', handleResize);
+    return () => {
+      mobileQuery.removeEventListener('change', updateMatches);
+      tabletQuery.removeEventListener('change', updateMatches);
+      desktopQuery.removeEventListener('change', updateMatches);
+    };
   }, []);
 
-  if (width === null) {
-    return {
-      isMobile: false,
-      isTablet: false,
-      isDesktop: true,
-    };
-  }
-
-  const isMobile = width < 768;
-  const isTablet = width >= 768 && width < 1024;
-  const isDesktop = width >= 1024;
-
-  return {
-    isMobile,
-    isTablet,
-    isDesktop,
-  };
+  return breakpoints;
 };
