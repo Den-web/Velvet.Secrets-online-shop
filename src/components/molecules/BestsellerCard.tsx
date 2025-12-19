@@ -21,13 +21,13 @@ export const BestsellerCard: React.FC<BestsellerCardProps> = ({ item }) => {
     <div
       className="
         flex flex-col h-full flex-shrink-0 overflow-hidden 
-        bg-white rounded-[4px] 
-        shadow-[1px_2px_10px_0_rgba(0,0,0,0.25)]
+        bg-white rounded 
+        shadow-custom
         sm:mb-2.5 lg:mb-0
-        w-full max-w-[286px]
+        w-full max-w-72
       "
     >
-      <div className="h-[229px] w-full relative flex-shrink-0">
+      <div className="h-56 w-full relative flex-shrink-0">
         <Image
           src={imageSrc}
           alt={item.title}
@@ -42,7 +42,7 @@ export const BestsellerCard: React.FC<BestsellerCardProps> = ({ item }) => {
               font-manrope font-bold text-grey6
               text-base md:text-xl
               leading-[1.4]
-              min-h-[46px] md:min-h-[56px]
+              min-h-12 md:min-h-14
               line-clamp-2
             "
           >
