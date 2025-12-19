@@ -39,6 +39,7 @@ body {
 }
 
 .custom-button-hero,
+.custom-btn-bestseller,
 .custom-btn-dressWithLove,
 .custom-btn-forYourSpace,
 .custom-btn-ChooseYourPerfectFit,
@@ -60,6 +61,7 @@ body {
   color: #121212 !important;
 }
 
+.custom-btn-bestseller:hover,
 .custom-btn-forYourSpace:hover,
 .custom-btn-ChooseYourPerfectFitTwo:hover,
 .custom-btn-feedbacks:hover {
@@ -80,3 +82,4 @@ body {
   color: #f16393 !important;
   transition: color 0.3s ease;
 }
+

@@ -15,6 +15,17 @@ import mobile1 from './hero/mobile-img1.jpg';
 import mobile2 from './hero/mobile-img2.jpg';
 import mobile3 from './hero/mobile-img3.jpg';
 
+import bestSellerMainDesktop from './bestSeller/bestsellerMainDesktop.jpg';
+import bestSellerCardDesktop1 from './bestseller/bestSellerCardDesktop1.jpg';
+import bestSellerCardDesktop2 from './bestseller/bestsellerCardDesktop2.jpg';
+import bestSellerCardDesktop3 from './bestSeller/bestSellerCardDesktop3.jpg';
+import bestSellerCardDesktop4 from './bestSeller/bestSellerCardDesktop4.jpg';
+
+import bestSellerCardTabletMobile1 from './bestSeller/bestSellerCardTabletMobile1.jpg';
+import bestSellerCardTabletMobile2 from './bestSeller/bestSellerCardTabletMobile2.jpg';
+import bestSellerCardTabletMobile3 from './bestSeller/bestSellerCardTabletMobile3.jpg';
+import bestSellerCardTabletMobile4 from './bestSeller/bestSellerCardTabletMobile4.jpg';
+
 import dressWithLoveDesktop from './dressWithLove/dressWithLoveDesktop.jpg';
 import dressWithLoveDesktopCarousel1 from './dressWithLove/dressWithLoveDesktopCarusel1.jpg';
 import dressWithLoveDesktopCarousel2 from './dressWithLove/dressWithLoveDesktopCarusel2.jpg';
@@ -64,6 +75,15 @@ export {
   mobile1,
   mobile2,
   mobile3,
+  bestSellerMainDesktop,
+  bestSellerCardDesktop1,
+  bestSellerCardDesktop2,
+  bestSellerCardDesktop3,
+  bestSellerCardDesktop4,
+  bestSellerCardTabletMobile1,
+  bestSellerCardTabletMobile2,
+  bestSellerCardTabletMobile3,
+  bestSellerCardTabletMobile4,
   dressWithLoveDesktop,
   dressWithLoveDesktopCarousel1,
   dressWithLoveDesktopCarousel2,
